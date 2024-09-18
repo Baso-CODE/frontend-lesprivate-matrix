@@ -1,34 +1,29 @@
-.container-tab {
+.container-all-tab {
   padding: 10px;
   background-color: rgb(255, 255, 255);
-  border-radius: 0 10px 10px 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.tab {
-  /* padding: 10px; */
-  background-color: #054599;
-  border: 10px solid transparent;
-  border-radius: 10px 10px 0 0;
-  margin-top: 50px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
+.title-container {
+  display: flex;
+  align-items: center; /* Untuk menyejajarkan gambar dan teks di tengah */
 }
 
-.selected {
-  background-color: rgb(255, 255, 255);
-  color: black;
-  cursor: pointer;
+.title-list {
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #054599;
+  padding-left: 10px; /* Jarak antara gambar dan teks */
 }
-/* KOTA */
 .parent-list-kota {
   display: flex;
-  justify-content: start;
-  /* background-color: #05469a; */
+  justify-content: flex-start;
   flex-wrap: wrap;
-  gap: 3px;
+  gap: 12px;
+
   margin-top: 20px;
   padding: 20px;
   border-radius: 10px;
@@ -36,25 +31,29 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .btn-kota {
   color: rgb(0, 0, 0);
   padding: 5px;
   border-radius: 50px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
   width: 20%;
+  height: 20%;
   font-weight: 500;
   font-size: 16px;
   text-decoration: none;
 }
+
 .btn-kota:hover {
   background-color: #f52f63;
   color: white;
   transition: 0.3s;
 }
+
 /* KELAS */
 .parent-list-kelas {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   /* background-color: #05469a; */
   flex-wrap: wrap;
   gap: 10px;
@@ -83,7 +82,7 @@
 /* MAPEL */
 .parent-list-mapel {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   /* background-color: #05469a; */
   flex-wrap: wrap;
   gap: 3px;
@@ -128,7 +127,8 @@
   width: 50px;
 }
 .icon-city {
-  width: 30px;
+  width: 40px; /* Ukuran gambar PNG */
+  height: auto; /* Otomatis menyesuaikan tinggi gambar */
 }
 
 /* RESPONSIVE */
@@ -146,9 +146,7 @@
     margin-top: 10px;
     /* width: 33%; */
   }
-  .selected {
 
-  }
   .container-all-tab {
     /* display: grid; */
     margin-top: 20px;
@@ -174,7 +172,23 @@
   }
 }
 @media only screen and (max-width: 820px) {
-  .parent-list-mapel, .parent-list-kota, .parent-list-kelas {
+  .parent-list-mapel,
+  .parent-list-kota,
+  .parent-list-kelas {
     justify-content: space-between;
   }
+}
+
+/* Style untuk pesan No Kelurahan */
+.no-kelurahan {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #f52f63;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  border-radius: 10px;
+  background-color: rgba(245, 47, 99, 0.1);
+  margin-top: 20px;
 }

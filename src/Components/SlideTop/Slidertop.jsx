@@ -1,101 +1,118 @@
 import React, { useEffect, useState } from "react";
-import Slider from "react-slick";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import { getAllSliderHeader2 } from "../../helper/request/getAllSliderHeader2Request";
+import { getAllSliderHeader } from "../../helper/request/getAllSliderHeaderRequest";
 import "./Slidertop.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
-// Skeleton
-import Skeleton from 'react-loading-skeleton';
-import 'react-loading-skeleton/dist/skeleton.css';
 
 const Slidertop = () => {
   const [sliderHeader, setSliderHeader] = useState([]);
-  const [sliderHeader_2, setSliderHeader_2] = useState([]);
-
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [sliderHeader2, setSliderHeader2] = useState([]);
 
   useEffect(() => {
-    fetchsliderHeader();
-    fetchsliderHeader_2();
-
-    setTimeout(() => {
-      setData('Ini adalah data yang sudah dimuat');
-      setLoading(false);
-    }, 3000); // 3 detik
+    fetchSliderHeader();
+    fetchSliderHeader_2();
   }, []);
 
-  const fetchsliderHeader = () => {
-    fetch("https://api.edulink-indonesia.com/sliderheader")
-      .then((res) => res.json())
-      .then((data) => {
-        setSliderHeader(data);
-      });
+  const fetchSliderHeader = async () => {
+    try {
+      const response = await getAllSliderHeader();
+
+      setSliderHeader(response.data);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
-  const fetchsliderHeader_2 = () => {
-    fetch("https://api.edulink-indonesia.com/sliderheader2")
-      .then((res) => res.json())
-      .then((data) => {
-        setSliderHeader_2(data);
-      });
+  const fetchSliderHeader_2 = async () => {
+    try {
+      const response = await getAllSliderHeader2();
+
+      setSliderHeader2(response.data);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
-  const settings = {
-    dots: false,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    className: "button-slider",
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 1,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
   };
+
+  // Custom Dot component
+  const CustomDot = ({ onClick, active }) => (
+    <button
+      onClick={onClick}
+      style={{
+        background: active ? "#04397D" : "#D1D5DB",
+        borderRadius: "50%",
+        width: "10px",
+        height: "10px",
+        border: "none",
+        margin: "0 5px",
+        cursor: "pointer",
+      }}
+    />
+  );
 
   return (
     <React.Fragment>
-        <div className="slider-top" style={{ background: "" }}>
-          <Slider {...settings}>
-            {sliderHeader.map((item, index) => {
-              return (
-                <div className="top-slider">
-                  <div className="slider" key={index}>
-                    <a href="https://api.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Nia%20https://app.edumatrix-indonesia.com,%20Saya%20ingin%20tanya%20program%20belajar%20yang%20ada%20di%20Edumatrix.%20Apa%20saja%20jenis%20program%20belajar%20dan%20pilihan%20paket%20sesinya?">
-                      <img
-                        src={
-                          "https://api.edulink-indonesia.com/images/" +
-                          item.image
-                        }
-                        alt="Program Bimbel - Edumatrix Indonesia"
-                      />
-                    </a>
-                  </div>
-                </div>
-              );
-            })}
-          </Slider>
-        </div>
-
-      <div className="slider-top-2" style={{ background: "" }}>
-        <Slider {...settings}>
-          {sliderHeader_2.map((item, index) => {
-            return (
-              <div className="top-slider">
-                <div className="slider" key={index}>
-                  <a href="https://api.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Nia%20https://app.edumatrix-indonesia.com,%20Saya%20ingin%20tanya%20program%20belajar%20yang%20ada%20di%20Edumatrix.%20Apa%20saja%20jenis%20program%20belajar%20dan%20pilihan%20paket%20sesinya?">
-                    <img
-                      src={
-                        "https://api.edulink-indonesia.com/images/" + item.image
-                      }
-                      alt="Program Bimbel - Edumatrix Indonesia"
-                    />
-                  </a>
-                </div>
+      <div className="slider-top desktop-only">
+        <Carousel
+          responsive={responsive}
+          autoPlay={true}
+          autoPlaySpeed={3000}
+          infinite={true}
+          showDots={true}
+          customDot={<CustomDot />}
+          arrows={false}>
+          {sliderHeader.map((item, index) => (
+            <div className="top-slider" key={index}>
+              <div className="slider">
+                <a href="https://api.whatsapp.com/send?phone=6285747281466&text=Halo%20Kak%20Linda%20https://apps.bimbelmatrix.com,%20Saya%20ingin%20tanya%20program%20belajar%20yang%20ada%20di%20Matrix%20Tutoring.%20Apa%20saja%20jenis%20program%20belajar%20dan%20pilihan%20paket%20sesinya?">
+                  <img
+                    src={item.url}
+                    alt="Program Bimbel - Edumatrix Indonesia"
+                  />
+                </a>
               </div>
-            );
-          })}
-        </Slider>
+            </div>
+          ))}
+        </Carousel>
+      </div>
+
+      <div className="slider-top-2 mobile-only">
+        <Carousel
+          responsive={responsive}
+          autoPlay={true}
+          autoPlaySpeed={3000}
+          infinite={true}
+          showDots={true}
+          customDot={<CustomDot />}
+          arrows={false}>
+          {sliderHeader2.map((item, index) => (
+            <div className="top-slider" key={index}>
+              <div className="slider">
+                <a href="https://api.whatsapp.com/send?phone=6285747281466&text=Halo%20Kak%20Linda%20https://apps.bimbelmatrix.com,%20Saya%20ingin%20tanya%20program%20belajar%20yang%20ada%20di%20Matrix%20Tutoring.%20Apa%20saja%20jenis%20program%20belajar%20dan%20pilihan%20paket%20sesinya?">
+                  <img
+                    src={item.url}
+                    alt="Program Bimbel - Edumatrix Indonesia"
+                  />
+                </a>
+              </div>
+            </div>
+          ))}
+        </Carousel>
       </div>
     </React.Fragment>
   );

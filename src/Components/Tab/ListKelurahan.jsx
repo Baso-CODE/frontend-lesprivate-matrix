@@ -1,46 +1,52 @@
-import React, { useEffect, useMemo, useState } from "react";
-import { Link, useLocation, useParams } from "react-router-dom";
-import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import { getAllKecamatanBySlug } from "../../helper/request/getAllKecamatanBySlug";
 
 const ListKelurahan = () => {
   const [kelurahan, setKelurahan] = useState([]);
-  const { id } = useParams();
-
-  function useQuery() {
-    const { search } = useLocation();
-
-    return useMemo(() => new URLSearchParams(search), [search]);
-  }
-
-  const query = useQuery();
-  const axiosJWT = axios.create();
-
+  const [kecamatan, setKecamatan] = useState([]);
+  const { slug } = useParams();
   useEffect(() => {
-    fetchKelurahan(id);
-  }, []);
+    const fetchKota = async () => {
+      try {
+        const response = await getAllKecamatanBySlug(slug);
+        setKelurahan(response.data.kelurahan);
+        setKecamatan(response.data);
+      } catch (error) {
+        console.error("Failed to fetch kecamatan data:", error);
+      }
+    };
 
-  const fetchKelurahan = () => {
-    fetch(`https://api.edulink-indonesia.com/kelurahan/${id}`)
-    .then((res) => res.json())
-      .then((data) => {
-        setKelurahan(data);
-      });
-  };
+    fetchKota();
+  }, [slug]);
 
   return (
     <div className="container-all-tab">
+      <div className="title-container">
+        <img
+          className="icon-city"
+          src={"/images/daftar-kota.png"}
+          alt="City Icon"
+        />
+        <h2 className="title-list">
+          {`Daftar Kelurahan di ${kecamatan.kecamatan || "..."}`}
+        </h2>
+      </div>
       <div className="parent-list-kota">
-        {kelurahan.map((item, index) => (
-          <Link
-            className="btn-kota"
-            key={index}
-            onClick={() => {
-              window.location.href = `/les-privat-di/kelurahan/${item.slug}`;
-            }}
-          >
-            {item.kelurahan}
-          </Link>
-        ))}
+        {kelurahan.length > 0 ? (
+          kelurahan.map((item, index) => (
+            <Link
+              className="btn-kota"
+              key={index}
+              onClick={() => {
+                window.location.href = `/les-privat-di/kelurahan/${item.slug}`;
+              }}>
+              {item.kelurahan}
+            </Link>
+          ))
+        ) : (
+          <p className="no-kelurahan">No Kelurahan</p>
+        )}
       </div>
     </div>
   );

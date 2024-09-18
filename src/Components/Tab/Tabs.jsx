@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import React, { useState } from "react";
 
 export default ({ children }) => {
@@ -7,8 +8,7 @@ export default ({ children }) => {
     <button
       key={index}
       className={`tab ${selected === index ? "selected" : ""}`}
-      onClick={() => setSelected(index)}
-    >
+      onClick={() => setSelected(index)}>
       {child.props.title}
     </button>
   ));

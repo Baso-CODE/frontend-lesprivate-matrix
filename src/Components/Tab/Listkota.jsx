@@ -1,113 +1,48 @@
 import React, { useEffect, useState } from "react";
-import Tabs from "./Tabs";
-import Tab from "./Tab";
-import "./Tab.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCity } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import jangkauanKota from "../../assets/kota.png";
-import city from "../../assets/city.png";
+import "./Tab.css";
+import { getAllKotaJabodatabek } from "../../helper/request/getAllKotaJabodatabek";
 
 const Listkota = () => {
   const [kota, setKota] = useState([]);
-  const [program, setProgram] = useState([]);
-  const [mapel, setMapel] = useState([]);
 
   useEffect(() => {
+    const fetchKota = async () => {
+      try {
+        const response = await getAllKotaJabodatabek();
+
+        setKota(response.data);
+      } catch (error) {
+        console.error("Failed to fetch kota data:", error);
+      }
+    };
+
     fetchKota();
-    fetchKelas();
-    fetchMapel();
   }, []);
-
-  const fetchKota = () => {
-    fetch("https://api.edulink-indonesia.com/kota")
-      .then((res) => res.json())
-      .then((data) => {
-        setKota(data);
-      });
-  };
-
-  const fetchKelas = () => {
-    fetch(`https://api.edulink-indonesia.com/kelas`)
-      .then((res) => res.json())
-      .then((data) => {
-        setProgram(data);
-      });
-  };
-
-  const fetchMapel = () => {
-    fetch("https://api.edulink-indonesia.com/matapelajaran")
-      .then((res) => res.json())
-      .then((data) => {
-        setMapel(data);
-      });
-  };
 
   return (
     <div className="container-all-tab">
-      <Tabs>
-        <Tab title="PROGRAM">
-          <div className="parent-list-kelas">
-            {program.map((item, index) => (
-              <Link
-                // to={`/les-privat/${item.slug.toLowerCase()}-terbaik?data=${
-                //   item.id
-                // }`}
-                className="btn-kelas"
-                key={index}
-                onClick={() => {
-                  window.location.href = `/les-privat/program/${item.slug}`;
-                }}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-        </Tab>
-        <Tab title="MAPEL">
-          <div className="parent-list-mapel">
-            {mapel.map((item, index) => (
-              <Link
-                // to={`/mata-pelajaran/${item.name.toLowerCase()}?data=${
-                //   item.id
-                // }`}
-                className="btn-mapel"
-                key={index}
-                onClick={() => {
-                  window.location.href = `/les-privat/mata-pelajaran/${item.slug}`;
-                }}
-              >
-                <div className="combine-icon-text">
-                  <img
-                    className="icon-mapel"
-                    src={"https://api.edulink-indonesia.com/images/" + item.image}
-                    alt="Bimbel dan Les Privat Terbaik"
-                  />
-                  {item.name}
-                </div>
-              </Link>
-            ))}
-          </div>
-        </Tab>
-        <Tab title="WILAYAH">
-          <div className="parent-list-kota">
-            {kota.map((item, index) => (
-              <Link
-                // to={`/les-privat-di-kota/${item.kota.toLowerCase()}?data=${
-                //   item.id
-                // }`}
-                className="btn-kota"
-                key={index}
-                onClick={() => {
-                  window.location.href = `/les-privat-di-kota/${item.slug}`;
-                }}
-              >
-                {item.kota}
-              </Link>
-            ))}
-          </div>
-        </Tab>
-      </Tabs>
+      <div className="title-container">
+        <img
+          className="icon-city"
+          src={"/images/daftar-kota.png"}
+          alt="City Icon"
+        />
+        {/* Gambar di sebelah kiri */}
+        <h2 className="title-list">Daftar Kota Indonesia</h2>
+      </div>
+      <div className="parent-list-kota">
+        {kota.map((item, index) => (
+          <Link
+            className="btn-kota"
+            key={index}
+            onClick={() => {
+              window.location.href = `/les-privat-di-kota/${item.slug}`;
+            }}>
+            {item.kota}
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };

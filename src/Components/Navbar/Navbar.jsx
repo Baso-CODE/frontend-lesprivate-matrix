@@ -1,92 +1,58 @@
-import React, { useEffect, useRef, useState } from "react";
-import "./Navbar.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import {
-  faArrowCircleDown,
-  faBars,
-  faSchool,
-  faSignIn,
-  faStar,
   faAnglesRight,
   faChevronDown,
+  faSchool,
+  faSignIn,
 } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import iconSupercamp from "../../assets/supercamp.png";
-import iconLiveClass from "../../assets/live_class.png";
-import iconTrainingCamp from "../../assets/training_camp.png";
-import LoadingBar from 'react-top-loading-bar'
-
+import "./Navbar.css";
 
 const Navbar = () => {
-
   const navigate = useNavigate();
-
-  const goToKelas = () => {
-    navigate("/pilihan-kelas");
-  };
 
   const goToAbout = () => {
     navigate("/tentang-kami");
+  };
+  const goToTutor = () => {
+    navigate("/tutor");
   };
 
   const goToHome = () => {
     navigate("/");
   };
 
-  const goToBimbelSnbt = () => {
-    navigate("/bimbel-snbt-terbaik");
+  const goToLesPrivateTk = () => {
+    navigate("/les-privat-tk");
   };
 
-  const goToBimbelSupercamp = () => {
-    navigate("/bimbel-supercamp-edumatrix");
+  const goToLesPrivateSD = () => {
+    navigate("/les-privat-sd");
   };
 
-  const goToBimbelTni = () => {
-    navigate("/bimbel-tni-polri-dan-sekolah-kedinasan");
+  const goToLesPrivateSMP = () => {
+    navigate("/les-privat-smp");
   };
 
-  const goToBimbelPrivat = () => {
-    navigate("/bimbel-privat-tk-sd-smp-sma-mahasiswa");
+  const goToBimbelPrivateSMA = () => {
+    navigate("/les-privat-sma");
   };
-
-  const goToBimbelLpdp = () => {
-    navigate("/bimbel-persiapan-seleksi-lpdp");
+  const goToBimbelPrivateKSM = () => {
+    navigate("/les-privat-akm-asesmen-kompetensi-minimum");
   };
-
-  const goToBimbelCpns = () => {
-    navigate("/bimbel-cpns-dan-pppk");
+  const goToBimbelPrivateMahasiswa = () => {
+    navigate("/les-privat-mahasiswa");
   };
-
-  const goToBimbelBumn = () => {
-    navigate("/bimbel-seleksi-bumn");
+  const goToBimbelPrivateBahasaAsing = () => {
+    navigate("/les-privat-bahasa-asing");
   };
-
-  const goToBimbelIgcse = () => {
-    navigate("/bimbel-kurikulum-igcse");
+  const goToBimbelPrivateSimakUI = () => {
+    navigate("/les-privat-simak-ui");
   };
-
-  const goToBimbelIup = () => {
-    navigate("/bimbel-iup-kki");
-  };
-
-  const goToBimbelOsn = () => {
-    navigate("/bimbel-osn");
-  };
-
-  const goToBimbelToefl = () => {
-    navigate("/bimbel-toefl-toeic-ielts-dan-english-conversation");
-  };
-
-  const goToBimbelKedokteran = () => {
-    navigate("/bimbel-masuk-kedokteran");
-  };
-
-  const goToProduk = () => {
-    navigate("/produk");
-  };
-
-  const goToBimbelKsn = () => {
-    navigate("/pelatihan-osn-ksn");
+  const goToBimbelPrivateSBMPTN = () => {
+    navigate("/les-privat-sbmptn");
   };
 
   return (
@@ -104,7 +70,7 @@ const Navbar = () => {
             onClick={() => goToHome()}
             alt="Logo Edumatrix Indonesia"
             className="logo-edumatrix"
-            src="https://edumatrix-education.vercel.app/static/media/logo_edm.d190f8a81fb23ea9ea9b.png"
+            src="/images/logo.png"
           />
 
           <ul className="menu-items">
@@ -123,166 +89,114 @@ const Navbar = () => {
               </a>
               <ul className="dropdown">
                 <div className="fill-dropdown">
-                  <li onClick={() => goToBimbelKedokteran()}>
+                  <li onClick={() => goToLesPrivateTk()}>
                     <a className="child-dropdown" href="">
                       <FontAwesomeIcon
                         className="icon-dropdown"
                         icon={faAnglesRight}
                       />
-                      Bimbel Kedokteran
+                      Les Privat Tk
                     </a>
                   </li>
-                  <li onClick={() => goToBimbelSupercamp()}>
+                  <li onClick={() => goToLesPrivateSD()}>
                     <a className="child-dropdown" href="">
                       <FontAwesomeIcon
                         className="icon-dropdown"
                         icon={faAnglesRight}
                       />
-                      Supercamp UTBK SNBT
+                      Les Privat SD
                     </a>
                   </li>
-                  <li onClick={() => goToBimbelSnbt()}>
+
+                  <li onClick={() => goToLesPrivateSMP()}>
                     <a className="child-dropdown" href="">
                       <FontAwesomeIcon
                         className="icon-dropdown"
                         icon={faAnglesRight}
                       />
-                      Bimbel UTBK SNBT
+                      Les Privat SMP
                     </a>
                   </li>
-                  <li onClick={() => goToBimbelTni()}>
+                  <li onClick={() => goToBimbelPrivateSMA()}>
                     <a className="child-dropdown" href="">
                       <FontAwesomeIcon
                         className="icon-dropdown"
                         icon={faAnglesRight}
                       />
-                      Bimbel TNI - POLRI
+                      Les Privat SMA
                     </a>
                   </li>
-                  <li onClick={() => goToBimbelPrivat()}>
+                  <li onClick={() => goToBimbelPrivateKSM()}>
                     <a className="child-dropdown" href="">
                       <FontAwesomeIcon
                         className="icon-dropdown"
                         icon={faAnglesRight}
                       />
-                      Les Privat TK - SD - SMP - SMA
+                      Les Privat AKM
                     </a>
                   </li>
-                  <li onClick={() => goToBimbelLpdp()}>
+                  <li onClick={() => goToBimbelPrivateMahasiswa()}>
                     <a className="child-dropdown" href="">
                       <FontAwesomeIcon
                         className="icon-dropdown"
                         icon={faAnglesRight}
                       />
-                      Bimbel LPDP
+                      Les Privat Mahasiswa
                     </a>
                   </li>
-                  <li onClick={() => goToBimbelCpns()}>
+                  <li onClick={() => goToBimbelPrivateBahasaAsing()}>
                     <a className="child-dropdown" href="">
                       <FontAwesomeIcon
                         className="icon-dropdown"
                         icon={faAnglesRight}
                       />
-                      Bimbel CPNS & PPPK
+                      Les Privat Bahasa Asing
                     </a>
                   </li>
-                  <li onClick={() => goToBimbelBumn()}>
+                  <li onClick={() => goToBimbelPrivateSimakUI()}>
                     <a className="child-dropdown" href="">
                       <FontAwesomeIcon
                         className="icon-dropdown"
                         icon={faAnglesRight}
                       />
-                      Bimbel BUMN
+                      Les Privat Simak UI
                     </a>
                   </li>
-                  <li onClick={() => goToBimbelIgcse()}>
+                  <li onClick={() => goToBimbelPrivateSBMPTN()}>
                     <a className="child-dropdown" href="">
                       <FontAwesomeIcon
                         className="icon-dropdown"
                         icon={faAnglesRight}
                       />
-                      IGCSE, O Level, A Level & IB Tutor
-                    </a>
-                  </li>
-                  <li onClick={() => goToBimbelIup()}>
-                    <a className="child-dropdown" href="">
-                      <FontAwesomeIcon
-                        className="icon-dropdown"
-                        icon={faAnglesRight}
-                      />
-                      Bimbel IUP - KKI
-                    </a>
-                  </li>
-                  <li onClick={() => goToBimbelOsn()}>
-                    <a className="child-dropdown" href="">
-                      <FontAwesomeIcon
-                        className="icon-dropdown"
-                        icon={faAnglesRight}
-                      />
-                      Bimbel OSN
-                    </a>
-                  </li>
-                  <li onClick={() => goToBimbelKsn()}>
-                    <a className="child-dropdown" href="">
-                      <FontAwesomeIcon
-                        className="icon-dropdown"
-                        icon={faAnglesRight}
-                      />
-                      Pelatihan OSN/KSN
-                    </a>
-                  </li>
-                  <li onClick={() => goToBimbelToefl()}>
-                    <a className="child-dropdown" href="">
-                      <FontAwesomeIcon
-                        className="icon-dropdown"
-                        icon={faAnglesRight}
-                      />
-                      Bimbel TOEFL - TOEIC - IELTS
+                      Les Privat SBMPTN
                     </a>
                   </li>
                 </div>
               </ul>
             </li>
-            <li>
-              <a onClick={() => goToProduk()} className="menu-nav">
-                <FontAwesomeIcon className="icon-navbar" icon={faSchool} />{" "}
-                Produk
-              </a>
-            </li>
+
             <li>
               <a onClick={() => goToAbout()} className="menu-nav">
                 <FontAwesomeIcon className="icon-navbar" icon={faSchool} />{" "}
                 About Us
               </a>
             </li>
-            {/* <li>
-              <a onClick={() => goToKelas()} className="menu-nav">
-                <FontAwesomeIcon className="icon-navbar" icon={faSchool} />{" "}
-                Program
-              </a>
-            </li> */}
+
             <li>
-              <a onClick={() => goToKelas()} className="menu-nav">
+              <a onClick={() => goToTutor()} className="menu-nav">
                 <FontAwesomeIcon className="icon-navbar" icon={faSchool} />{" "}
-                Kelas
+                Tutor
               </a>
             </li>
             <li>
               <a
                 className="menu-nav-daftar"
-                href="https://api.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Nia%20https://app.edumatrix-indonesia.com,%20Saya%20ingin%20tanya%20program%20belajar%20yang%20ada%20di%20Edumatrix.%20Apa%20saja%20jenis%20program%20belajar%20dan%20pilihan%20paket%20sesinya?"
-              >
+                href="https://api.whatsapp.com/send?phone=6285747281466&text=Halo%20Kak%20Linda%20https://apps.bimbelmatrix.com,%20Saya%20ingin%20tanya%20program%20belajar%20yang%20ada%20di%20Matrix.%20Apa%20saja%20jenis%20program%20belajar%20dan%20pilihan%20paket%20sesinya?">
                 <FontAwesomeIcon className="icon-navbar" icon={faSignIn} />{" "}
                 DAFTAR
               </a>
             </li>
           </ul>
-          {/* <img
-            onClick={() => goToHome()}
-            alt="Logo Edumatrix Indonesia"
-            className="logo"
-            src="https://edumatrix-education.vercel.app/static/media/logo_edm.d190f8a81fb23ea9ea9b.png"
-          /> */}
         </div>
       </nav>
     </React.Fragment>

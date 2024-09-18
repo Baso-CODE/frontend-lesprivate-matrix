@@ -1,0 +1,47 @@
+/* ProfesionalTeam.css */
+
+.profesional-team-section {
+  display: flex;
+
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+  align-items: center;
+}
+
+.profesional-team-inner {
+  display: flex;
+  flex-direction: column; /* flex-col */
+
+  align-items: center;
+  margin-bottom: 1.75rem; /* mb-[28px] */
+}
+
+.profesional-team-title {
+  font-size: 2rem;
+  text-align: center;
+  color: #333333;
+  max-width: 100%;
+  line-height: 1.25;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .profesional-team-title {
+    font-size: 3rem; /* md:text-[48px] */
+  }
+}
+
+@media (min-width: 1024px) {
+  .profesional-team-title {
+    font-size: 4rem; /* lg:text-[64px] */
+  }
+}
+
+.profesional-team-image img {
+  max-width: 100%; /* max-w-full */
+  height: auto; /* h-auto */
+  border-radius: 20px;
+}

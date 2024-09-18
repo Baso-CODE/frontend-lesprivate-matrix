@@ -1,13 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import PreLoader from './Components/Preloader/PreLoader';
-import { hydrate, render } from 'react-dom';
-import { HelmetProvider } from 'react-helmet-async-async';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./index.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 // if (root.hasChildNodes()) {
 //   hydrate(App, root)
 // } else {
@@ -17,8 +13,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // ServiceWorker.unregister()
 root.render(
   <React.StrictMode>
-    <HelmetProvider>
     <App />
-    </HelmetProvider>
   </React.StrictMode>
 );

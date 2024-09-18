@@ -1,18 +1,51 @@
-import React from "react";
-import "./PromoHomepage.css"
-import promoDesktop from "../../assets/promo_bimbel_terbaik.jpeg";
-import promoMoble from "../../assets/Banner July Back to School.jpg";
+import React, { useEffect, useState } from "react";
+import "./PromoHomepage.css";
+
+import { getAllPromo } from "../../helper/request/getAllPromo";
 
 const PromoHomepage = () => {
+  const [dataPromo, setDataPromo] = useState([]);
+
+  // Mengambil data FAQ dari API
+  useEffect(() => {
+    const fetchDataFaq = async () => {
+      try {
+        const promoData = await getAllPromo();
+        setDataPromo(promoData.data);
+      } catch (err) {
+        console.error("Error fetching FAQ:", err);
+      }
+    };
+
+    fetchDataFaq();
+  }, []);
+
   return (
     <React.Fragment>
       {/* DESKTOP */}
       <div className="parent-promo-home">
-        <img className="child-promo-home" src={promoDesktop} alt="Promo Bimbel Terbaik" />
+        {dataPromo.length > 0 &&
+          dataPromo.map((promo, index) => (
+            <img
+              key={index}
+              className="child-promo-home"
+              src={promo.url}
+              alt={`Promo ${index + 1}`}
+            />
+          ))}
       </div>
+
       {/* MOBILE */}
       <div className="parent-promo-home-mobile">
-        <img className="child-promo-home-mobile" src={promoMoble} alt="Promo Bimbel Terbaik" />
+        {dataPromo.length > 0 &&
+          dataPromo.map((promo, index) => (
+            <img
+              key={index}
+              className="child-promo-home"
+              src={promo.url}
+              alt={`Promo ${index + 1}`}
+            />
+          ))}
       </div>
     </React.Fragment>
   );

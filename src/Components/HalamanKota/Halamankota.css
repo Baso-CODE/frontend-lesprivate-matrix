@@ -8,9 +8,10 @@
   justify-content: center;
   align-items: center;
   color: white;
-  background-color: #054599;
+  background-color: #00139b;
   padding: 20px;
   border-radius: 10px;
+  margin-top: 20px;
 }
 .isi-content-kota {
   display: flex;
@@ -27,16 +28,19 @@
 .title-halaman-kota {
   font-size: 30px;
   font-weight: 800;
+  color: white;
+  line-height: normal;
 }
 .child-paragraf-kota {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .teks-content {
   display: grid;
-  gap: 20px;
+  gap: 10px;
 }
 .rumah-adat {
   width: 100%;
+  height: auto;
 }
 
 /* RESPONSIVE */
@@ -48,10 +52,11 @@
   .content-kota {
     display: grid;
     padding-bottom: 0;
+    margin-top: 90px;
   }
-  .rumah-adat {
+  /* .rumah-adat {
     margin-bottom: -50px;
-  }
+  } */
   .teks-content {
     margin-top: 65px;
   }
@@ -106,7 +111,7 @@
     padding-right: 3%;
   }
   .teks-content {
-    margin-top: 50px;
+    margin-top: 30px;
     text-align: justify;
   }
   .content-kota {

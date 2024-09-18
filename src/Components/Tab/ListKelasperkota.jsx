@@ -1,12 +1,12 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-vars */
+import axios from "axios";
 import React, { useEffect, useMemo, useState } from "react";
-import Tabs from "./Tabs";
+import { Link, useLocation, useParams } from "react-router-dom";
 import Tab from "./Tab";
 import "./Tab.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCity } from "@fortawesome/free-solid-svg-icons";
-import { Link, useLocation, useParams } from "react-router-dom";
-import jangkauanKota from "../../assets/kota.png";
-import axios from "axios";
+import Tabs from "./Tabs";
 
 const Listkelasperkota = () => {
   const [kelasperkota, setKelasPerKota] = useState([]);
@@ -34,7 +34,7 @@ const Listkelasperkota = () => {
       .then((res) => res.json())
       .then((data) => {
         setKelasPerKota(data);
-        ("data kelasperkota", data);
+        "data kelasperkota", data;
       });
   };
 
@@ -68,8 +68,7 @@ const Listkelasperkota = () => {
                 key={index}
                 onClick={() => {
                   window.location.href = `/les-privat/program/${item.slug}`;
-                }}
-              >
+                }}>
                 {item.name}
               </Link>
             ))}
@@ -86,12 +85,13 @@ const Listkelasperkota = () => {
                 key={index}
                 onClick={() => {
                   window.location.href = `/les-privat/mata-pelajaran/${item.slug}`;
-                }}
-              >
+                }}>
                 <div className="combine-icon-text">
                   <img
                     className="icon-mapel"
-                    src={"https://api.edulink-indonesia.com/images/" + item.image}
+                    src={
+                      "https://api.edulink-indonesia.com/images/" + item.image
+                    }
                     alt="Bimbel Berkualitas"
                   />
                   {item.name}
@@ -109,8 +109,7 @@ const Listkelasperkota = () => {
                 key={index}
                 onClick={() => {
                   window.location.href = `/les-privat/program/${item.slugKelas}/kota/${item.slugKota}`;
-                }}
-              >
+                }}>
                 {item.namaKota}
               </Link>
             ))}

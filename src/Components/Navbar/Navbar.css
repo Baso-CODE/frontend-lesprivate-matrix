@@ -6,10 +6,6 @@
   margin: 0;
 } */
 
-body {
-  font-family: "Montserrat", sans-serif;
-}
-
 .navbar input[type="checkbox"],
 .navbar .hamburger-lines {
   display: none;
@@ -29,8 +25,8 @@ body {
   background-size: cover; */
   position: fixed;
   width: 100%;
-  background: #054599;
-  color: #ffffff;
+  background: #ffffff;
+  color: black;
   z-index: 9999;
   padding: 5px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
@@ -50,41 +46,29 @@ body {
   display: flex;
   align-items: center;
   gap: 5px;
-  color: white;
+  color: #054599;
   font-weight: 600 !important;
   cursor: pointer;
   /* transform: scale(1.1); */
 }
 
-.menu-nav:hover {
-  /* background-color: #00909b; */
-  /* border-top: 2px solid #ffffff; */
-  /* padding: 5px; */
-  /* padding-left: 10px;
-  padding-right: 10px; */
-  /* font-size: 14px; */
-  /* transform: scale(1.1); */
-}
 .menu-nav-daftar {
-  background-color: #00909b;
-  border-radius: 2px;
+  background-color: #011cde;
+  border-radius: 5px;
   padding: 10px;
   padding-left: 30px;
   padding-right: 30px;
   transition: 0.5s;
   font-size: 14px;
+  color: white;
 }
 .menu-nav-daftar:hover {
-  background-color: #00818a;
+  background-color: #05469a;
   transition: 0.5s;
 }
 .menu-items {
   order: 2;
   display: flex;
-}
-.logo {
-  /* order: 1;
-  font-size: 2.3rem; */
 }
 
 .menu-items li {
@@ -104,7 +88,6 @@ body {
   width: 13%;
   cursor: pointer;
 }
-
 
 /* DROPDOWN MENU */
 .icon-navbar-1 {
@@ -126,9 +109,7 @@ body {
   width: 94%;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.dropdown li + li {
-  /* margin-top: 10px; */
-}
+
 .dropdown li {
   /* padding: 0.5em 1em; */
   width: 20em;
@@ -153,7 +134,7 @@ body {
   padding: 12px;
 }
 .child-dropdown:hover {
-  background-color: #f52f63;
+  background-color: #011cde;
   color: white;
   border-radius: 100px;
 }
@@ -161,6 +142,10 @@ body {
   color: rgb(0, 96, 126);
   padding: 5px;
 }
+.child-dropdown:hover .icon-dropdown {
+  color: white;
+}
+
 .fill-dropdown {
   display: flex;
   flex-wrap: wrap;
@@ -208,15 +193,16 @@ body {
     left: 20px;
     z-index: 2;
     display: flex;
+
     flex-direction: column;
     justify-content: space-between;
   }
 
   .navbar-container .hamburger-lines .line {
     display: block;
-    height: 3px;
+    height: 4px;
     width: 100%;
-    background: #ffffff;
+    background: #054599;
   }
 
   .navbar-container .hamburger-lines .line1 {
@@ -234,6 +220,7 @@ body {
   }
   .menu-nav {
     font-size: 13px;
+    color: wheat;
   }
 
   .navbar .menu-items {
@@ -255,11 +242,6 @@ body {
     margin-bottom: 1.8rem;
     font-size: 1.1rem;
     font-weight: 500;
-  }
-
-  .logo-edumatrix {
-    /* width: 35% !important;
-    margin-left: 80%; */
   }
 
   .navbar-container input[type="checkbox"]:checked ~ .menu-items {
@@ -287,8 +269,8 @@ body {
     display: contents;
   }
   .logo-edumatrix {
-    width: 64%;
-    margin-left: 50%;
+    width: 45%;
+    margin-left: 66%;
   }
   .dropdown {
     position: absolute;

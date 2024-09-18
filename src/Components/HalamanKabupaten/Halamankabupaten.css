@@ -9,8 +9,9 @@
   align-items: center;
   padding: 20px;
   color: white;
-  background-color: #054599;
+  background-color: #00139b;
   border-radius: 10px;
+  margin-top: 20px;
 }
 .isi-content-kabupaten {
   display: flex;
@@ -26,6 +27,11 @@
 }
 .child-paragraf-kabupaten {
   margin-top: 20px;
+  color: white;
+}
+.paragraf-kabupaten {
+  margin-top: 20px;
+  color: white;
 }
 .teks-content {
   display: grid;

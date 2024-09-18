@@ -1,0 +1,43 @@
+/* Container utama */
+.carousel-container-master {
+  margin-top: 60px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+/* Judul Carousel */
+.carousel-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 32px;
+  color: #333333;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* Panel individual */
+.panel-master-teacher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* Gambar di dalam panel */
+.carousel-image-master-teacher {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  .carousel-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 500px) {
+  .carousel-title {
+    font-size: 25px;
+  }
+}
