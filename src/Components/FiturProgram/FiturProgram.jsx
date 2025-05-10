@@ -11,7 +11,11 @@ const FiturProgram = () => {
       <div className="features">
         <div className="feature">
           <div className="feature-header">
-            <div className="icon">👍</div>
+            {/* <img
+              src="/images/fitur-program/program.webp"
+              alt="Pengajar Berkualitas Icon"
+              className="icon-fitur"
+            /> */}
             <h3>Program Lengkap</h3>
           </div>
           <p>
@@ -22,7 +26,11 @@ const FiturProgram = () => {
         </div>
         <div className="feature">
           <div className="feature-header">
-            <div className="icon">🏆</div>
+            {/* <img
+              src="/images/fitur-program/berkualitas.webp"
+              alt="Pengajar Berkualitas Icon"
+              className="icon-fitur"
+            /> */}
             <h3>Pengajar Berkualitas</h3>
           </div>
           <p>
@@ -33,7 +41,11 @@ const FiturProgram = () => {
         </div>
         <div className="feature">
           <div className="feature-header">
-            <div className="icon">🧠</div>
+            {/* <img
+              src="/images/fitur-program/smart.webp"
+              alt="Pengajar Berkualitas Icon"
+              className="icon-fitur"
+            /> */}
             <h3>Smart Methode</h3>
           </div>
           <p>
@@ -44,7 +56,11 @@ const FiturProgram = () => {
         </div>
         <div className="feature">
           <div className="feature-header">
-            <div className="icon">🔍</div>
+            {/* <img
+              src="/images/fitur-program/kurikulum.webp"
+              alt="Pengajar Berkualitas Icon"
+              className="icon-fitur"
+            /> */}
             <h3>Kurikulum Personal</h3>
           </div>
           <p>
@@ -55,7 +71,11 @@ const FiturProgram = () => {
         </div>
         <div className="feature">
           <div className="feature-header">
-            <div className="icon">📝</div>
+            {/* <img
+              src="/images/fitur-program/QUIS.webp"
+              alt="Pengajar Berkualitas Icon"
+              className="icon-fitur"
+            /> */}
             <h3>Intensive Quiz</h3>
           </div>
           <p>
@@ -66,7 +86,6 @@ const FiturProgram = () => {
         </div>
         <div className="feature">
           <div className="feature-header">
-            <div className="icon">🛒</div>
             <h3>Quality Control</h3>
           </div>
           <p>

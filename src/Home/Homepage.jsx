@@ -1,16 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect } from "react";
-import ReactGA from "react-ga";
+import React from "react";
 import { Helmet } from "react-helmet-async";
 import AsalSekolahSiswaEdumatrix from "../Components/AsalSekolahSiswa/AsalSekolahSiswa";
 import BannerComponent from "../Components/Banner/Banner";
-import PromoFree from "../Components/BannerPromo/PromoFree";
 import FiturProgram from "../Components/FiturProgram/FiturProgram";
-import Floatingcta from "../Components/FloatingCta/Floatingcta";
-import Keunggulan from "../Components/Keunggulan/Keunggulan";
 import LogoDescriptionComponent from "../Components/LogoDescription/LogoDescription";
 import MatrixFeatures from "../Components/MatrixFeatures/MatrixFeatures";
-import Navbar from "../Components/Navbar/Navbar";
 import OnlineLesOptions from "../Components/OnlineLesOption/OnlineLesOption";
 import PengajarLestPrivate from "../Components/PengajarLestPrivate/PengajarLestPrivate";
 import ProgramBelajarLesPrivat from "../Components/ProgramBelajarLesPrivate/ProgramBelajarLesPrivate";
@@ -18,36 +13,30 @@ import ProgramLesPrivat from "../Components/ProgramLesPrivate/ProgramLesPrivate"
 import PilihanProgram from "../Components/ProgramOptions/PilihanProgram";
 import AsalSekolahSiswaMarque from "../Components/SekolahSiswaMarque/SekolahSiswaMarque";
 
-import AccordionFAQ from "../Components/FAQ/AccordionFAQ";
-import MasterCarousel from "../Components/MasterCarousel/MasterCarousel";
-import Slidertop from "../Components/SlideTop/Slidertop";
+import HeroHome from "../Components/HeroHome/HeroHome";
+import MasterTeacher from "../Components/MasterTeacher/MasterTeacher";
+import EmbrelaSlider from "../Components/SlideTop/EmbrelaSlider";
 import SuccessStoryLesPrivate from "../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
 import Listkota from "../Components/Tab/Listkota";
+import TestimonialSiswa from "../Components/TestimonialSiswa/TestimonialSiswa";
+import TestimoniOrtuSiswa from "../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
 import "./Homepage.css";
 import PromoHomepage from "./PromoHomepage/PromoHomepage";
 
-const Homepage = ({ setProgress }) => {
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname);
-
-    setProgress(60);
-    setTimeout(() => {
-      setProgress(100);
-    }, 50);
-  }, []);
-
+const Homepage = () => {
   return (
     <React.Fragment>
       <Helmet>
         <meta charSet="utf-8" />
         <title>
-          Les Privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa,
-          Bahasa Asing, Simak UI, SBMPTN) Terbaik - Matrix Tutoring
+          Les Privat Online & Guru ke Rumah TK SD SMP SMA AKM UTBK SNBT SIMAK UI
+          Mahasiswa Bahasa Mengaji Komputer TOEFL Terbaik - Matrix Tutoring
         </title>
         <meta
           name="description"
-          content="Matrix Tutoring menyediakan layanan les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) terbaik di Tutoring dengan berbagai fitur dan program unggulan untuk membantu belajar lebih efektif."
+          content="Matrix Tutoring menyediakan layanan les privat online dan ke rumah untuk TK hingga SMA, termasuk AKM, persiapan universitas, dan bahasa asing."
         />
+
         <meta
           name="keywords"
           content="les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN), edukasi, Matrix, belajar efektif, program les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN), tutor berkualitas"
@@ -63,43 +52,50 @@ const Homepage = ({ setProgress }) => {
         />
         <meta
           property="og:image"
-          content="https://dblpm.edulink-indonesia.com/promo-images/IMG1725949265851.png"
+          content="https://apps.bimbelmatrix.com/images/DSIKON_BULANAN.webp"
         />
         <meta property="og:url" content={window.location.href} />
         <meta property="og:type" content="website" />
         <link rel="canonical" href={window.location.href} />
+        <meta
+          name="twitter:card"
+          content="https://apps.bimbelmatrix.com/images/DSIKON_BULANAN.webp"
+        />
+        <meta
+          name="twitter:image"
+          content="https://apps.bimbelmatrix.com/images/DSIKON_BULANAN.webp"
+        />
       </Helmet>
-      {/* <PreLoader /> */}
-      <Navbar />
+
       <div className="container-all">
-        <Slidertop />
+        <HeroHome />
+        <EmbrelaSlider />
+        {/* <Slidertop /> */}
         <BannerComponent />
         <LogoDescriptionComponent />
         <PengajarLestPrivate />
         <FiturProgram />
-        <PromoFree />
+        {/*    {/* <PromoFree /> */}
         <PilihanProgram />
         <OnlineLesOptions />
         <ProgramLesPrivat />
-        <MasterCarousel />
+        <MasterTeacher />
         <ProgramBelajarLesPrivat />
         {/* <CurriculumOptions /> */}
         <MatrixFeatures />
         <SuccessStoryLesPrivate />
+        <TestimonialSiswa />
+        <TestimoniOrtuSiswa />
         {/* <TestimoniLestPrivate /> */}
         <AsalSekolahSiswaEdumatrix />
         <AsalSekolahSiswaMarque />
-
-        <Keunggulan />
-
+        {/* <Keunggulan /> */}
         <Listkota />
-        <AccordionFAQ />
-
+        {/* <AccordionFAQ /> */}
         <PromoHomepage />
       </div>
 
-      {/* <Bottombar /> */}
-      <Floatingcta />
+      {/* <Floatingcta /> */}
     </React.Fragment>
   );
 };

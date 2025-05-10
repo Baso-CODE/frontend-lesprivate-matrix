@@ -21,7 +21,11 @@ const LesPrivateSBMPTNHeader = () => {
       </p>
 
       <div className="image-lesPrivate">
-        <img src="/images/les-private/tk/sbmptn.jpg" alt="Les Privat SBMPTN" />
+        <img
+          loading="lazy"
+          src="/images/les-private/sbmptn/sbmptn.webp"
+          alt="Les Privat SBMPTN"
+        />
         <p className="image-caption">
           Les privat SBMPTN terbaik se-Indonesia raya
         </p>
@@ -31,7 +35,7 @@ const LesPrivateSBMPTNHeader = () => {
       <h2 id="kegiatan-belajar-sbmptn">
         Apakah kita sudah memberikan dukungan terbaik?
       </h2>
-      <p className="indent">
+      <p className="">
         Bagi Ananda yang saat ini berada di kelas 12, sebentar lagi akan
         melaksanakan ujian penting yang dilaksanakan pada semester kedua, yaitu
         UN dan UASBN. Kemudian akan disibukkan kembali dengan Ujian Tulis,
@@ -50,7 +54,7 @@ const LesPrivateSBMPTNHeader = () => {
 
       {/* content 2 */}
       <h2 id="dukungan-orang-tua">Dukungan Orang Tua yang Tak Tergantikan</h2>
-      <p className="indent">
+      <p className="">
         Kemampuan Ananda dalam problem solving, manajemen waktu, manajemen emosi
         dan menentukan prioritas akan sangat teruji pada fase saat ini. Di fase
         perjuangan Ananda saat ini, diperlukan dukungan maksimal dari orang tua
@@ -63,7 +67,11 @@ const LesPrivateSBMPTNHeader = () => {
       </p>
 
       <div className="image-lesPrivate">
-        <img src="/images/les-private/tk/ugm.jpg" alt="Les UI" />
+        <img
+          loading="lazy"
+          src="/images/les-private/sbmptn/ugm.webp"
+          alt="Les UI"
+        />
         <p className="image-caption">
           Les privat SBMPTN terbaik se-Indonesia raya
         </p>
@@ -85,7 +93,7 @@ const LesPrivateSBMPTNHeader = () => {
       <h2 id="sistem-belajar-terstruktur">
         Les Privat Online atau Guru ke Rumah
       </h2>
-      <p className="indent">
+      <p className="">
         Selain kemampuan siswa, sistem belajar yang terstruktur dan sistematis
         dilengkapi dengan guru les privat yang tepat akan memperbesar peluang
         siswa untuk menjalani proses belajar dengan lebih baik dan mendapatkan
@@ -94,12 +102,16 @@ const LesPrivateSBMPTNHeader = () => {
         mendampingi belajar Ananda.
       </p>
       <div className="image-lesPrivate">
-        <img src="/images/les-private/tk/itb.jpg" alt="Les UI" />
+        <img
+          loading="lazy"
+          src="/images/les-private/sbmptn/itb.webp"
+          alt="Les UI"
+        />
         <p className="image-caption">
           Les privat SBMPTN terbaik se-Indonesia raya
         </p>
       </div>
-      <p className="indent">
+      <p className="">
         Les Privat Matrix (Matrix Tutoring) adalah lembaga penyedia layanan jasa
         les privat untuk TK, SD, SMP, SMA, UN, OSN, Simak UI, SBMPTN dan
         Mahasiswa, guru datang ke rumah dan les online dengan spesialisasi

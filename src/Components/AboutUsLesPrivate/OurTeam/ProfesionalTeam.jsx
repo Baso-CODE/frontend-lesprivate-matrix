@@ -7,11 +7,24 @@ const ProfesionalTeam = () => {
       <div className="profesional-team-container">
         <div className="profesional-team-content">
           <div className="profesional-team-inner">
-            <h1 className="profesional-team-title">Our Professional Team</h1>
-            <div className="profesional-team-image">
+            <h2 className="profesional-team-title">Our Professional Team</h2>
+            <div className="profesional-team-image desktop-image">
               <img
-                src="/images/about-us/about-us.png"
-                alt="Les Private Matrix Tutoring"
+                src="/images/about-us/about-us.webp"
+                alt="les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
+                width="1301"
+                height="732"
+                loading="lazy"
+              />
+            </div>
+            {/* Gambar untuk mobile */}
+            <div className="profesional-team-image mobile-image">
+              <img
+                src="/images/about-us/ABOUT-US-PORTRAIT.webp"
+                alt="les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
+                width="500"
+                height="500"
+                loading="lazy"
               />
             </div>
           </div>

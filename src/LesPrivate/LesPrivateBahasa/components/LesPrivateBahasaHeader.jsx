@@ -11,7 +11,8 @@ const LesPrivateBahasaHeader = () => {
       </h1>
       <div className="image-lesPrivate">
         <img
-          src="/images/les-private/tk/bahasa-asing.png"
+          loading="lazy"
+          src="/images/les-private/bahasa-asing/bahasa-asing.webp"
           alt="Les Privat Bahasa"
         />
         <p className="image-caption">
@@ -32,7 +33,7 @@ const LesPrivateBahasaHeader = () => {
       <h2 id="program-les-privat-bahasa">
         Program Les Privat Bahasa Asing dan BIPA
       </h2>
-      <p className="indent">
+      <p className="">
         Program Les Privat Bahasa Asing dan BIPA kami bisa diikuti oleh anak –
         anak dari usia TK/SD, remaja SMP/SMA, maupun untuk Mahasiswa, Karyawan
         dan Orang Dewasa pada umumnya. Tidak ada batasan usia dalam belajar
@@ -54,7 +55,7 @@ const LesPrivateBahasaHeader = () => {
         Les Privat Bahasa Inggris Conversation dan Les Privat Bahasa Asing
         Offline dan Online
       </h2>
-      <p className="indent">
+      <p className="">
         MATRIX siap melayani permintaan untuk guru les bahasa asing dengan
         pilihan program berbasis privat, yaitu Les Privat Offline dan Les Privat
         Online. Les Privat Offline (tatap muka) adalah layanan les privat bagi
@@ -81,7 +82,8 @@ const LesPrivateBahasaHeader = () => {
       </h2>
       <div className="image-lesPrivate">
         <img
-          src="/images/les-private/tk/bahasa-content.jpg"
+          loading="lazy"
+          src="/images/les-private/bahasa-asing/bahasa-content.webp"
           alt="Guru Les Privat Bahasa Asing Berpengalaman"
         />
         <p className="image-caption">

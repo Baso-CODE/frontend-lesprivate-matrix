@@ -2,22 +2,71 @@ import React from "react";
 import "./MatrixFooter.css";
 
 const MatrixFooter = () => {
+  const currentYear = new Date().getFullYear();
+  const contacts = [
+    {
+      name: "Ms. Eka",
+      phone: "6287783999349",
+    },
+    {
+      name: "Ms. Linda",
+      phone: "6287783999349 ",
+    },
+    {
+      name: "Ms. Dita",
+      phone: "6285817279118",
+    },
+  ];
+
+  const createWhatsAppLink = (phone, name) => {
+    //     const message = `
+    // Halo Kak ${name} dari ${"https://apps.bimbelmatrix.com/"}, saya ingin bertanya program belajar untuk:
+    // Kelas: [Isi Kelas]
+    // Mapel: [Isi Mapel]
+    // Kurikulum: [Isi Kurikulum]
+    // Wilayah: [Isi Wilayah]
+    // `.trim(); // Placeholder untuk pesan yang diinginkan
+    const message = `
+Hi ${name} https://apps.bimbelmatrix.com/, Saya tertarik *Promo Seru, Diskon Rp100,000*, bisa dijelaskan informasi selengkapnya?
+`.trim();
+
+    return `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(
+      message
+    )}`;
+  };
+
+  // image cta
+  const phone = "6285747281466"; // Nomor telepon
+  const baseUrl = `https://api.whatsapp.com/send?phone=${phone}&text=`;
+
+  const message = `
+  Hi Ms. Linda https://apps.bimbelmatrix.com/, Saya tertarik *Promo Seru, Diskon Rp100,000*, bisa dijelaskan informasi selengkapnya?
+  `.trim();
+
+  const finalUrl = `${baseUrl}${encodeURIComponent(message)}`;
+
   return (
-    <div className="footer-container-matrix">
+    <footer className="footer-container-matrix">
       <div className="footer-content-matrix">
         <div className="grid-container-footer-matrix">
           <div className="office-info-footer">
             <img
-              src="/images/logo.png"
-              alt=""
+              loading="eager"
+              src="/images/logo.webp"
+              alt="les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
               className="footer-matrix-image"
             />
-            <h2 className="section-title-footer-matrix">Office:</h2>
+            <p className="address-footer-matrix">
+              MATRIX – Les ONLINE & Guru ke Rumah
+            </p>
+            <div className="section-title-footer-matrix">Office:</div>
             <p className="address-footer-matrix">
               Pesona Khayangan Blok CP No. 4, Depok, Jawa Barat (Lingkungan
               Pendidikan UI)
             </p>
-            <h3 className="section-subtitle-footer-matrix">Telepon Kantor:</h3>
+            <div className="section-subtitle-footer-matrix">
+              Telepon Kantor:
+            </div>
             <ul className="phone-list-footer-matrix">
               <li>021-2761-2993</li>
             </ul>
@@ -25,32 +74,20 @@ const MatrixFooter = () => {
               <li>08.30 - 17.00 WIB Senin s.d Jumat</li>
               <li>08.30 - 13.00 WIB Sabtu</li>
             </ul>
-            <h3>Layanan 24 Jam:</h3>
+            <div className="section-subtitle-footer-matrix">
+              Layanan 24 Jam:
+            </div>
             <ul className="phone-list-footer-matrix">
-              <li>
-                <a
-                  href="https://api.whatsapp.com/send?phone=6285817279118&text=Halo%20Kak%20Desi,%20Saya%20ingin%20tanya%20program%20belajar%20yang%20ada%20di%20Matrix%20Tutoring."
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  085817279118 (Ms. Desi)
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://api.whatsapp.com/send?phone=6287783999349&text=Halo%20Kak%20Reva,%20Saya%20ingin%20tanya%20program%20belajar%20yang%20ada%20di%20Matrix%20Tutoring."
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  087783999349 (Ms. Reva)
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://api.whatsapp.com/send?phone=6285747281466&text=Halo%20Kak%20Linda,%20Saya%20ingin%20tanya%20program%20belajar%20yang%20ada%20di%20Matrix%20Tutoring."
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  085747281466 (Ms. Linda)
-                </a>
-              </li>
+              {contacts.map((contact) => (
+                <li key={contact.phone}>
+                  <a
+                    href={createWhatsAppLink(contact.phone, contact.name)}
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    {contact.phone} ({contact.name})
+                  </a>
+                </li>
+              ))}
             </ul>
             <ul className="office-hours-footer-matrix">
               <li>Privat Masuk PTN</li>
@@ -58,38 +95,74 @@ const MatrixFooter = () => {
               <li>Privat Bahasa</li>
             </ul>
           </div>
+          <div className="students-info-footer-matrix">
+            <div className="section-title-footer-matrix">
+              Our Students are from:
+            </div>
+            <ul className="students-list-footer-matrix">
+              <li>Australia</li>
+              <li>Singapore</li>
+              <li>South Korea</li>
+              <li>Japan</li>
+              <li>Taiwan</li>
+              <li>Indonesia</li>
+              <li>India</li>
+              <li>Pakistan</li>
+              <li>Yaman</li>
+              <li>Malaysia</li>
+              <li>Senegal</li>
+              <li>South Africa</li>
+              <li>Nepal</li>
+              <li>Uzbekistan</li>
+              <li>Russia</li>
+              <li>Italy</li>
+              <li>Germany</li>
+              <li>USA</li>
+            </ul>
+          </div>
 
           <div className="member-of-footer-matrix">
-            <h2 className="section-title-footer-matrix">Member of:</h2>
-            <img
-              src="/images/learnhing-methode/hilpi.jpg"
-              alt="Hilmi"
-              className="member-logo-footer-matrix"
-            />
-            <h2 className="section-title-footer-matrix">
+            <div className="section-title-footer-matrix">
               Our Student`s School:
-            </h2>
+            </div>
             <img
+              loading="eager"
               src="/images/learnhing-methode/asal_sekolah_siswa.webp"
-              alt="Hilmi"
+              alt="les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
               className="member-logo-footer-matrix"
+              width="575"
+              height="942"
             />
           </div>
 
-          <div className="students-info-footer-matrix">
-            <h2 className="section-title-footer-matrix">
-              Our Students are From:
-            </h2>
+          <div className="member-of-footer-matrix">
+            <div className="section-title-footer-matrix">Member of:</div>
             <img
-              src="/images/learnhing-methode/negara.png"
-              alt="Country Flag"
-              className="students-flag-footer-matrix"
+              loading="eager"
+              src="/images/learnhing-methode/hilpi.webp"
+              alt="les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring "
+              className="member-logo-footer-matrix"
+              width="300"
+              height="177"
             />
+            <div className="section-title-footer-matrix">
+              Click to Chat WhatsApp
+            </div>
+            <a href={finalUrl} target="_blank" rel="noopener noreferrer">
+              <img
+                loading="eager"
+                src="/images/whatsapp_footer.webp"
+                alt="les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
+                className="member-logo-footer-matrix"
+                width="575"
+                height="942"
+              />
+            </a>
           </div>
         </div>
-
+        {/* Copyright Section */}
         <p className="footer-copyright-matrix">
-          Copyright 2024 - MATRIX - ONLINE & OFFLINE - Les Privat Online
+          Copyright {currentYear} - MATRIX - ONLINE & OFFLINE Les Privat Online
           Indonesia dan Les Privat Profesional Datang ke Rumah di Jabodetabek
         </p>
         <p className="footer-location-matrix">
@@ -97,7 +170,7 @@ const MatrixFooter = () => {
           Depok, Tangerang, Tangsel, Bekasi)
         </p>
       </div>
-    </div>
+    </footer>
   );
 };
 

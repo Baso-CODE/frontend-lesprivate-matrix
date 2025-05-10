@@ -24,9 +24,10 @@ const Listkota = () => {
     <div className="container-all-tab">
       <div className="title-container">
         <img
+          loading="lazy"
           className="icon-city"
-          src={"/images/daftar-kota.png"}
-          alt="City Icon"
+          src={"/images/daftar-kota.webp"}
+          alt="les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
         />
         {/* Gambar di sebelah kiri */}
         <h2 className="title-list">Daftar Kota Indonesia</h2>

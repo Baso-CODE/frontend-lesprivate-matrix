@@ -3,7 +3,11 @@ import "./ProfesionalMaster.css";
 const ProfesionalMaster = () => {
   return (
     <div className="profesional-master-teacher">
-      <img src="/images/profesional-master.png" alt="Promo Free" />
+      <img
+        loading="lazy"
+        src="/images/profesional-master.png"
+        alt="les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
+      />
     </div>
   );
 };

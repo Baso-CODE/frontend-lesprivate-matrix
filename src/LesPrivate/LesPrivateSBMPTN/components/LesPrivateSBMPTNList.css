@@ -18,7 +18,7 @@
   padding: 0;
   margin: 0;
   display: grid;
-  gap: 16px; /* Spacing between items */
+  gap: 6px; /* Spacing between items */
 }
 
 .subject-list-les-private-SBMPTN-item {
@@ -40,4 +40,11 @@
   font-weight: 600;
 }
 
-/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .les-private-SBMPTN-list-container h2 {
+    font-size: 1rem;
+  }
+  .subject-text {
+    font-size: 0.8rem;
+  }
+}

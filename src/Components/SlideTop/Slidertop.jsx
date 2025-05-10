@@ -79,10 +79,14 @@ const Slidertop = () => {
           {sliderHeader.map((item, index) => (
             <div className="top-slider" key={index}>
               <div className="slider">
-                <a href="https://api.whatsapp.com/send?phone=6285747281466&text=Halo%20Kak%20Linda%20https://apps.bimbelmatrix.com,%20Saya%20ingin%20tanya%20program%20belajar%20yang%20ada%20di%20Matrix%20Tutoring.%20Apa%20saja%20jenis%20program%20belajar%20dan%20pilihan%20paket%20sesinya?">
+                <a
+                  href="https://api.whatsapp.com/send?phone=6285747281466&text=Halo%20Kak%20Linda%20https://apps.bimbelmatrix.com,%20Saya%20ingin%20tanya%20program%20belajar%20yang%20ada%20di%20Matrix%20Tutoring.%20Apa%20saja%20jenis%20program%20belajar%20dan%20pilihan%20paket%20sesinya?"
+                  target="_blank"
+                  rel="noopener noreferrer">
                   <img
+                    loading="lazy"
                     src={item.url}
-                    alt="Program Bimbel - Edumatrix Indonesia"
+                    alt="Program Bimbel - les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
                   />
                 </a>
               </div>
@@ -103,10 +107,14 @@ const Slidertop = () => {
           {sliderHeader2.map((item, index) => (
             <div className="top-slider" key={index}>
               <div className="slider">
-                <a href="https://api.whatsapp.com/send?phone=6285747281466&text=Halo%20Kak%20Linda%20https://apps.bimbelmatrix.com,%20Saya%20ingin%20tanya%20program%20belajar%20yang%20ada%20di%20Matrix%20Tutoring.%20Apa%20saja%20jenis%20program%20belajar%20dan%20pilihan%20paket%20sesinya?">
+                <a
+                  href="https://api.whatsapp.com/send?phone=6285747281466&text=Halo%20Kak%20Linda%20https://apps.bimbelmatrix.com,%20Saya%20ingin%20tanya%20program%20belajar%20yang%20ada%20di%20Matrix%20Tutoring.%20Apa%20saja%20jenis%20program%20belajar%20dan%20pilihan%20paket%20sesinya?"
+                  target="_blank"
+                  rel="noopener noreferrer">
                   <img
+                    loading="lazy"
                     src={item.url}
-                    alt="Program Bimbel - Edumatrix Indonesia"
+                    alt="Program Bimbel - les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
                   />
                 </a>
               </div>

@@ -88,6 +88,7 @@ const Listkelasperkota = () => {
                 }}>
                 <div className="combine-icon-text">
                   <img
+                    loading="lazy"
                     className="icon-mapel"
                     src={
                       "https://api.edulink-indonesia.com/images/" + item.image

@@ -11,50 +11,58 @@ const SuccessStoryLesPrivate = () => {
       <div className="success-story-content">
         <div className="success-story-item">
           <img
-            src="https://lesprivatmatrix.com/wp-content/uploads/2024/04/testimoni-1-800x800.jpeg"
-            alt="Success Story 1"
+            loading="lazy"
+            src="/images/succes-story/A.webp"
+            alt="Success Story 1 les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
           />
         </div>
         <div className="success-story-item">
           <img
-            src="https://lesprivatmatrix.com/wp-content/uploads/2024/04/testimoni-2-800x800.jpeg"
-            alt="Success Story 2"
+            loading="lazy"
+            src="/images/succes-story/B.webp"
+            alt="Success Story 2 les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
           />
         </div>
         <div className="success-story-item">
           <img
-            src="https://lesprivatmatrix.com/wp-content/uploads/2024/07/UTBK_SNBT_Malik-1-800x801.jpeg"
-            alt="Success Story 3"
+            loading="lazy"
+            src="/images/succes-story/C.webp"
+            alt="Success Story 3 les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
           />
         </div>
         <div className="success-story-item">
           <img
-            src="https://lesprivatmatrix.com/wp-content/uploads/2024/07/UTBK_SNBT_Eka-1-800x801.jpeg"
-            alt="Success Story 4"
+            loading="lazy"
+            src="/images/succes-story/D.webp"
+            alt="Success Story 4 les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
           />
         </div>
         <div className="success-story-item">
           <img
-            src="/images/succes-story/testimoni-5.jpeg"
-            alt="Success Story 4"
+            loading="lazy"
+            src="/images/succes-story/E.webp"
+            alt="Success Story 5 les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
           />
         </div>
         <div className="success-story-item">
           <img
-            src="/images/succes-story/testimoni-6.jpeg"
-            alt="Success Story 4"
+            loading="lazy"
+            src="/images/succes-story/F.webp"
+            alt="Success Story 6 les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
           />
         </div>
         <div className="success-story-item">
           <img
-            src="https://lesprivatmatrix.com/wp-content/uploads/2024/07/UTBK_SNBT_Evelyn-800x801.jpeg"
-            alt="Success Story 4"
+            loading="lazy"
+            src="/images/succes-story/G.webp"
+            alt="Success Story 7 les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
           />
         </div>
         <div className="success-story-item">
           <img
-            src="https://lesprivatmatrix.com/wp-content/uploads/2024/07/UTBK_SNBT_Filza-800x801.jpeg"
-            alt="Success Story 4"
+            loading="lazy"
+            src="/images/succes-story/H.webp"
+            alt="Success Story 8 les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
           />
         </div>
       </div>

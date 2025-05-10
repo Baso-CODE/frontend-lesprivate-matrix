@@ -1,7 +1,7 @@
 /* MediaMassa.css */
 
 .container-media-marquee {
-  background-color: #f5f5f5;
+  background-color: #d4e5f5;
   position: relative;
 }
 
@@ -10,7 +10,7 @@
   inset: 0;
   z-index: 6;
   pointer-events: none;
-  background: linear-gradient(to right, #f4f4f4, transparent, #f4f4f4);
+  background: linear-gradient(to right, #d4e5f5, transparent, #d4e5f5);
 }
 
 .title-container-media-marquee {
@@ -22,7 +22,7 @@
   color: #333333;
   font-size: 2rem; /* Default size */
   font-weight: bold;
-  font-family: "Oswald", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .marquee-container-media-marquee {
@@ -40,4 +40,10 @@
   margin: 0 1rem;
   height: 70px;
   border-radius: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .title-container-media-marquee-h2 {
+    font-size: 1.4rem;
+  }
 }

@@ -8,7 +8,11 @@ const LesPrivateSDHeader = () => {
         Les Privat SD – Guru Les Privat SD ke Rumah dan Bimbel Online
       </h1>
       <div className="image-lesPrivate">
-        <img src="/images/les-private/tk/sd.png" alt="Les Privat sd" />
+        <img
+          loading="lazy"
+          src="/images/les-private/sd/sd.webp"
+          alt="Les Privat sd"
+        />
         <p className="image-caption">Les privat sd terbaik se-jabodetabek</p>
       </div>
       <p>
@@ -22,7 +26,7 @@ const LesPrivateSDHeader = () => {
 
       {/* Section 1 */}
       <h2 id="manfaat-les-privat-sd">Manfaat Les Privat SD</h2>
-      <p className="indent">
+      <p className="">
         Dengan banyaknya keluhan orangtua yang kesulitan dalam mengajari anak
         belajar, banyak orangtua memilih untuk menyewa jasa guru les privat. Hal
         itu berdampak pada semakin tingginya permintaan guru les privat ke rumah
@@ -45,7 +49,7 @@ const LesPrivateSDHeader = () => {
       <h2 id="keunggulan-les-privat-sd">
         Keunggulan Les Privat SD di Edumatrix
       </h2>
-      <p className="indent">
+      <p className="">
         Banyak orangtua memilih jasa guru les privat SD di antaranya karena satu
         guru hanya mengajar satu siswa, guru yang menyesuaikan dengan karakter
         dan cara belajar siswa, membantu anak fokus belajar dan menyelesaikan
@@ -65,7 +69,7 @@ const LesPrivateSDHeader = () => {
 
       {/* Section 3 */}
       <h2 id="layanan-les-privat-sd">Layanan Les Privat SD di Edumatrix</h2>
-      <p className="indent">
+      <p className="">
         Les Privat Matrix memberikan layanan les privat SD untuk semua mata
         pelajaran, baik untuk kurikulum Nasional, Nasional Plus maupun
         Internasional. Les Privat Matrix dapat melayani permintaan guru les
@@ -82,7 +86,7 @@ const LesPrivateSDHeader = () => {
         SD untuk kurikulum Internasional meliputi Matematika, Bahasa Indonesia,
         Bahasa Inggris, Pendidikan Agama, Bahasa Mandarin dan lain – lain.
       </p>
-      <p className="indent">
+      <p className="">
         Les Privat Matrix siap mengirimkan pengajar yang ahli di bidangnya dan
         berpengalaman mengajar Les Privat SD. Pengajar kami adalah dosen,
         asisten dosen, guru, mahasiswa berprestasi dan alumni dari UI, ITB, UGM,

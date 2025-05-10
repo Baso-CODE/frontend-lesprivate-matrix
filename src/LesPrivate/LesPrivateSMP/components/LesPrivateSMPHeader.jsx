@@ -22,7 +22,8 @@ const LesPrivateSMPHeader = () => {
 
       <div className="image-lesPrivate">
         <img
-          src="/images/les-private/tk/smp.png"
+          loading="lazy"
+          src="/images/les-private/smp/smp.webp"
           alt="Les Privat TK & Calistung"
         />
         <p className="image-caption">Les privat smp terbaik se-jabodetabek</p>
@@ -30,7 +31,7 @@ const LesPrivateSMPHeader = () => {
 
       {/* Section 1 */}
       <h2 id="pilihan-bahasa-dan-kurikulum">Pilihan Bahasa dan Kurikulum</h2>
-      <p className="indent">
+      <p className="">
         Bahasa pengantar belajar untuk Les Privat SMP bisa menggunakan Bahasa
         Indonesia, Bilingual (Indonesia – Inggris) atau Full English. Les privat
         SMP untuk kurikulum Internasional meliputi Matematika, Bahasa Indonesia,
@@ -40,9 +41,7 @@ const LesPrivateSMPHeader = () => {
         IPA, IPS, Pkn, dan mapel lain yang diajarkan di tingkat SMP.
       </p>
 
-      {/* Section 2 */}
-      <h2 id="persiapan-ujian">Persiapan Ujian</h2>
-      <p className="indent">
+      <p className="">
         Les Privat Matrix juga memberikan les privat untuk persiapan Ujian
         Tengah Semester, Ujian Akhir Semester, Ujian Cambridge, Ujian IB, maupun
         Ujian Asesmen Kompetensi Minimum. Dengan pendampingan yang tepat, siswa
@@ -53,7 +52,7 @@ const LesPrivateSMPHeader = () => {
       <h2 id="pengajar-berkualitas-dan-fleksibilitas">
         Pengajar Berkualitas dan Fleksibilitas
       </h2>
-      <p className="indent">
+      <p className="">
         Les Privat Matrix siap mengirimkan pengajar yang ahli di bidangnya dan
         berpengalaman mengajar Les Privat SMP. Pengajar kami adalah dosen,
         asisten dosen, guru, mahasiswa berprestasi dan alumni dari UI, ITB, UGM,

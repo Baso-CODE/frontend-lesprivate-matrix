@@ -1,36 +1,37 @@
 /* LesPrivateTKSection.css */
 
-.centered-content-lesPrivate-sd {
+.centered-content-lesPrivate-tk {
   width: 100%;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-.centered-content-lesPrivate-sd h1 {
-  font-size: 2rem;
-  font-family: "Oswald", sans-serif;
+.centered-content-lesPrivate-tk h1 {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
-  color: #333;
+  color: #333333;
   text-align: center;
   margin-bottom: 1rem;
+  line-height: 24px;
 }
 
-.centered-content-lesPrivate-sd h2 {
-  font-size: 1.2rem;
-  font-family: "Oswald", sans-serif;
+.centered-content-lesPrivate-tk h2 {
+  font-size: 1.4rem;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   color: #333;
   margin-top: 2rem;
   margin-bottom: 0.3rem;
 }
 
-.centered-content-lesPrivate-sd p {
-  font-size: 0.9rem;
-  color: #555555;
+.centered-content-lesPrivate-tk p {
+  font-size: 1rem;
+  color: #4f4f4f;
   line-height: 1.6;
   margin-bottom: 1.5rem;
   font-weight: 500;
-  font-family: "Roboto", sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 .indent {
   text-indent: 20px; /* Menambahkan indentasi hanya pada paragraf dengan class "indent" */
@@ -55,16 +56,16 @@
 
 /* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
-  .centered-content-lesPrivate-sd h1 {
-    font-size: 1.8rem;
+  .centered-content-lesPrivate-tk h1 {
+    font-size: 1.6rem;
   }
 
-  .centered-content-lesPrivate-sd h2 {
+  .centered-content-lesPrivate-tk h2 {
+    font-size: 1.4rem;
+  }
+
+  .centered-content-lesPrivate-tk p {
     font-size: 1rem;
-  }
-
-  .centered-content-lesPrivate-sd p {
-    font-size: 0.9rem;
   }
 
   .image-caption {
@@ -73,16 +74,16 @@
 }
 
 @media (max-width: 768px) {
-  .centered-content-lesPrivate-sd h1 {
-    font-size: 1.6rem;
+  .centered-content-lesPrivate-tk h1 {
+    font-size: 1.4rem;
   }
 
-  .centered-content-lesPrivate-sd h2 {
+  .centered-content-lesPrivate-tk h2 {
     font-size: 1.2rem;
   }
 
-  .centered-content-lesPrivate-sd p {
-    font-size: 0.9rem;
+  .centered-content-lesPrivate-tk p {
+    font-size: 1rem;
   }
 
   .image-caption {
@@ -91,15 +92,16 @@
 }
 
 @media (max-width: 480px) {
-  .centered-content-lesPrivate-sd h1 {
-    font-size: 1.4rem;
-  }
-
-  .centered-content-lesPrivate-sd h2 {
+  .centered-content-lesPrivate-tk h1 {
     font-size: 1.2rem;
+    line-height: 27px;
   }
 
-  .centered-content-lesPrivate-sd p {
+  .centered-content-lesPrivate-tk h2 {
+    font-size: 1rem;
+  }
+
+  .centered-content-lesPrivate-tk p {
     font-size: 0.8rem;
   }
 

@@ -18,7 +18,7 @@
   padding: 0;
   margin: 0;
   display: grid;
-  gap: 16px; /* Spacing between items */
+  gap: 6px; /* Spacing between items */
 }
 
 .keunggulan-subject-list-les-private-SBMPTN-item {
@@ -41,3 +41,8 @@
   color: #4a4a4a; /* Ganti warna teks sesuai keinginan, misalnya biru */
 }
 /* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .keunggulan-les-private-SBMPTN-list-container h2 {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,44 @@
+/* Container Styling */
+.alumni-lps-container {
+  margin: 4vh auto;
+}
+
+/* Header Styling */
+.alumni-lps-header h2 {
+  text-align: start;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #333333;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+/* Image Styling */
+.alumni-lps-container img {
+  width: 100%;
+
+  height: auto;
+  border-radius: 8px;
+
+  margin-top: 20px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .alumni-lps-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .alumni-lps-container img {
+    max-width: 100%;
+  }
+}
+
+.description__master-teacher {
+  font-size: 1rem;
+  color: #3a4a3f;
+  text-align: start;
+  font-weight: 600;
+  line-height: 1.6;
+  font-family: "Nunito", sans-serif;
+}

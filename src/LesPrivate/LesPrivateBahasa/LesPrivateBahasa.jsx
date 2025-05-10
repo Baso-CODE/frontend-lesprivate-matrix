@@ -1,10 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import AsalSekolahSiswaEdumatrix from "../../Components/AsalSekolahSiswa/AsalSekolahSiswa";
-import PromoFree from "../../Components/BannerPromo/PromoFree";
 import FiturProgram from "../../Components/FiturProgram/FiturProgram";
-import Floatingcta from "../../Components/FloatingCta/Floatingcta";
-import MasterCarousel from "../../Components/MasterCarousel/MasterCarousel";
+import Keunggulan from "../../Components/Keunggulan/Keunggulan";
+import MasterTeacher from "../../Components/MasterTeacher/MasterTeacher";
 import MatrixFeatures from "../../Components/MatrixFeatures/MatrixFeatures";
 import OnlineLesOptions from "../../Components/OnlineLesOption/OnlineLesOption";
 import PengajarLestPrivate from "../../Components/PengajarLestPrivate/PengajarLestPrivate";
@@ -12,9 +11,9 @@ import ProgramBelajarLesPrivat from "../../Components/ProgramBelajarLesPrivate/P
 import ProgramLesPrivat from "../../Components/ProgramLesPrivate/ProgramLesPrivate";
 import PilihanProgram from "../../Components/ProgramOptions/PilihanProgram";
 import AsalSekolahSiswaMarque from "../../Components/SekolahSiswaMarque/SekolahSiswaMarque";
-import Slidertop from "../../Components/SlideTop/Slidertop";
-import Listkota from "../../Components/Tab/Listkota";
+import EmbrelaSlider from "../../Components/SlideTop/EmbrelaSlider";
 import PromoHomepage from "../../Home/PromoHomepage/PromoHomepage";
+import ListKotaProgramLesPrivate from "../components/ListKotaProgramLesPrivate/ListKotaProgramLesPrivate";
 import TableOfContents from "../components/TableOfContent";
 import LesPrivateBahasaHeader from "./components/LesPrivateBahasaHeader";
 
@@ -76,7 +75,7 @@ const LesPrivateBahasa = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>
-          Bimbel Les Privat Bahasa Asing • Kursus Bahasa Inggris dan Asing - Les
+          Bimbel Les Privat Bahasa Asing Kursus Bahasa Inggris dan Asing Les
           Privat Matrix
         </title>
         <meta name="robots" content="index, follow" />
@@ -110,7 +109,7 @@ const LesPrivateBahasa = () => {
         {/* Open Graph Meta Tags */}
         <meta
           property="og:title"
-          content="Les Privat Bahasa Asing Terbaik #1 - Les Private Matrix"
+          content="Les Privat Bahasa Asing Terbaik #1 Les Private Matrix"
         />
         <meta
           property="og:description"
@@ -123,7 +122,7 @@ const LesPrivateBahasa = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://dblpm.edulink-indonesia.com/promo-images/IMG1725949265851.png"
+          content="https://apps.bimbelmatrix.com/images/DSIKON_BULANAN.webp"
         />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -131,11 +130,11 @@ const LesPrivateBahasa = () => {
         {/* Twitter Card Meta Tags */}
         <meta
           name="twitter:card"
-          content="https://dblpm.edulink-indonesia.com/promo-images/IMG1725949265851.png"
+          content="https://apps.bimbelmatrix.com/images/DSIKON_BULANAN.webp"
         />
         <meta
           name="twitter:title"
-          content="Les Privat Bahasa Asing Terbaik #1 - Les Private Matrix"
+          content="Les Privat Bahasa Asing Terbaik #1 Les Private Matrix"
         />
         <meta
           name="twitter:description"
@@ -143,23 +142,23 @@ const LesPrivateBahasa = () => {
         />
         <meta
           name="twitter:image"
-          content="https://dblpm.edulink-indonesia.com/promo-images/IMG1725949265851.png"
+          content="https://apps.bimbelmatrix.com/images/DSIKON_BULANAN.webp"
         />
         <meta name="twitter:site" content="@matrix_tutoring" />
       </Helmet>
 
       <div className="container-all">
-        <Slidertop />
+        <EmbrelaSlider />
+        {/* <Slidertop /> */}
         <TableOfContents title="Table of Contents" items={items} />
         <LesPrivateBahasaHeader />
-
         <section id="pengajar-les-private">
           <PengajarLestPrivate />
         </section>
         <section id="fitur-program-les-private">
           <FiturProgram />
         </section>
-        <PromoFree />
+        {/*    {/* <PromoFree /> */}
         <section id="pilihan-program-les-private">
           <PilihanProgram />
         </section>
@@ -169,20 +168,23 @@ const LesPrivateBahasa = () => {
         <section id="program-les-private-edumatrix">
           <ProgramLesPrivat />
         </section>
-        <MasterCarousel />
+        <MasterTeacher />
         <ProgramBelajarLesPrivat />
         <MatrixFeatures />
         <section id="asal-sekolah-siswa-edumatrix-private">
           <AsalSekolahSiswaEdumatrix />
           <AsalSekolahSiswaMarque />
         </section>
-
-        <Listkota />
-
+        <Keunggulan />
+        <ListKotaProgramLesPrivate
+          program={"les-privat-bahasa-asing"}
+          title={"Les Privat Bahasa Asing"}
+        />
+        {/* <AccordionFAQ /> */}
         <PromoHomepage />
       </div>
 
-      <Floatingcta />
+      {/* <Floatingcta /> */}
       {/* <Bottombar /> */}
     </React.Fragment>
   );

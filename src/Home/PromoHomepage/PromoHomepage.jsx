@@ -27,10 +27,13 @@ const PromoHomepage = () => {
         {dataPromo.length > 0 &&
           dataPromo.map((promo, index) => (
             <img
+              loading="lazy"
               key={index}
               className="child-promo-home"
               src={promo.url}
-              alt={`Promo ${index + 1}`}
+              alt={`Promo les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) ${
+                index + 1
+              } - Matrix Tutoring`}
             />
           ))}
       </div>
@@ -40,10 +43,13 @@ const PromoHomepage = () => {
         {dataPromo.length > 0 &&
           dataPromo.map((promo, index) => (
             <img
+              loading="lazy"
               key={index}
               className="child-promo-home"
               src={promo.url}
-              alt={`Promo ${index + 1}`}
+              alt={`Promo les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) ${
+                index + 1
+              } - Matrix Tutoring`}
             />
           ))}
       </div>

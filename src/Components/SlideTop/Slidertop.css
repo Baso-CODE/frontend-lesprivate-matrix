@@ -28,3 +28,30 @@
     display: none;
   }
 }
+
+.embla {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  min-width: 100%;
+  position: relative;
+}
+
+.top-slider img {
+  width: 100%;
+  height: auto;
+}
+
+.lazyload {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+.lazyloaded {
+  opacity: 1;
+}

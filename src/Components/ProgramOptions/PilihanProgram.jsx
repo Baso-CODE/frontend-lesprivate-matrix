@@ -5,7 +5,12 @@ const PilihanProgram = () => {
   return (
     <div className="program-options">
       <div className="option">
-        <div className="icon">🏠</div>
+        <img
+          loading="lazy"
+          className="icon-program"
+          src="/images/pilihan-program/house.png"
+          alt="Ikon Buku"
+        />
         <h3>Program Offline / Guru ke Rumah</h3>
         <p>
           Melayani untuk siswa di Jakarta, Bogor, Depok, Tangesel, Tangerang,
@@ -14,7 +19,12 @@ const PilihanProgram = () => {
         </p>
       </div>
       <div className="option">
-        <div className="icon">🌐</div>
+        <img
+          loading="lazy"
+          className="icon-program"
+          src="/images/pilihan-program/onlinee.png"
+          alt="Ikon Buku"
+        />
         <h3>Program Online / Les Privat Online</h3>
         <p>
           Melayani untuk siswa dari Bandung, Surabaya, Malang, Semarang, Jogja,

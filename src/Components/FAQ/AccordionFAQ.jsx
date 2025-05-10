@@ -59,9 +59,7 @@ const AccordionFAQ = () => {
     <>
       <div className="main-container-faq">
         <div className="main-wrapper-faq">
-          <div className="accordion-title-faq">
-            Masih bingung dan ragu dengan Kami?
-          </div>
+          <div className="accordion-title-faq">Frequently Asked Question</div>
           <div className="accordion-wrapper-faq">
             {dataFaq.map((item, index) => (
               <Accordion

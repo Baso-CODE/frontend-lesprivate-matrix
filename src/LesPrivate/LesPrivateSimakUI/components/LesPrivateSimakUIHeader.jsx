@@ -23,7 +23,8 @@ const LesPrivateSimakUIHeader = () => {
 
       <div className="image-lesPrivate">
         <img
-          src="/images/les-private/tk/simakui.jpg"
+          loading="lazy"
+          src="/images/les-private/simak-ui/simakui.webp"
           alt="Les Privat simak ui"
         />
         <p className="image-caption">
@@ -35,7 +36,7 @@ const LesPrivateSimakUIHeader = () => {
       <h2 id="kegiatan-belajar-simak-ui">
         Apakah kita sudah memberikan dukungan terbaik?
       </h2>
-      <p className="indent">
+      <p className="">
         Bagi Ananda yang saat ini berada di kelas 12, sebentar lagi akan
         melaksanakan ujian penting yang dilaksanakan pada semester kedua, yaitu
         UN dan UASBN. Kemudian akan disibukkan kembali dengan Ujian Tulis,
@@ -54,7 +55,7 @@ const LesPrivateSimakUIHeader = () => {
 
       {/* content 2 */}
       <h2 id="dukungan-orang-tua">Dukungan Orang Tua yang Tak Tergantikan</h2>
-      <p className="indent">
+      <p className="">
         Kemampuan Ananda dalam problem solving, manajemen waktu, manajemen emosi
         dan menentukan prioritas akan sangat teruji pada fase saat ini. Di fase
         perjuangan Ananda saat ini, diperlukan dukungan maksimal dari orang tua
@@ -67,7 +68,11 @@ const LesPrivateSimakUIHeader = () => {
       </p>
 
       <div className="image-lesPrivate">
-        <img src="/images/les-private/tk/content-ui.jpg" alt="Les UI" />
+        <img
+          loading="lazy"
+          src="/images/les-private/simak-ui/content-ui.webp"
+          alt="Les UI"
+        />
         <p className="image-caption">
           Les privat simak UI terbaik se-Indonesia raya
         </p>
@@ -87,7 +92,7 @@ const LesPrivateSimakUIHeader = () => {
 
       {/* content 4 */}
       <h2 id="sistem-belajar-terstruktur">Sistem Belajar Terstruktur</h2>
-      <p className="indent">
+      <p className="">
         Selain kemampuan siswa, sistem belajar yang terstruktur dan sistematis
         dilengkapi dengan guru les privat yang tepat akan memperbesar peluang
         siswa untuk menjalani proses belajar dengan lebih baik dan mendapatkan
@@ -95,7 +100,11 @@ const LesPrivateSimakUIHeader = () => {
         sbmptn yang sesuai untuk mendampingi belajar Ananda.
       </p>
       <div className="image-lesPrivate">
-        <img src="/images/les-private/tk/universitas-impian.jpg" alt="Les UI" />
+        <img
+          loading="lazy"
+          src="/images/les-private/simak-ui/universitas-impian.webp"
+          alt="Les UI"
+        />
         <p className="image-caption">
           Les privat simak UI terbaik se-Indonesia raya
         </p>

@@ -8,7 +8,11 @@ const LesPrivateSMAHeader = () => {
         Les Privat SMA – Guru Les Privat SMA ke Rumah dan Bimbel Online
       </h1>
       <div className="image-lesPrivate">
-        <img src="/images/les-private/tk/sma.png" alt="Les Privat sma" />
+        <img
+          loading="lazy"
+          src="/images/les-private/sma/sma.webp"
+          alt="Les Privat sma"
+        />
         <p className="image-caption">Les privat sma terbaik se-jabodetabek</p>
       </div>
       <p>
@@ -21,9 +25,7 @@ const LesPrivateSMAHeader = () => {
         meningkat.
       </p>
 
-      {/* Section 1 */}
-      <h2 id="manfaat-les-privat-sma">Manfaat Les Privat SMA ke Rumah</h2>
-      <p className="indent">
+      <p className="">
         Dengan les privat SMA ke rumah, siswa dapat memperoleh perhatian penuh
         dari pengajar dan fokus pada materi yang sulit dipahami. Pendekatan
         personal ini membuat belajar menjadi lebih efektif dan terarah.
@@ -31,15 +33,13 @@ const LesPrivateSMAHeader = () => {
 
       {/* Section 2 */}
       <h2 id="kurikulum-dan-mata-pelajaran">Kurikulum dan Mata Pelajaran</h2>
-      <p className="indent">
+      <p className="">
         Les privat SMA mencakup semua kurikulum, baik Nasional, Nasional Plus,
         maupun Internasional, dengan mata pelajaran seperti Matematika, Fisika,
         Kimia, Biologi, Bahasa Inggris, dan lainnya.
       </p>
 
-      {/* Section 3 */}
-      <h2 id="persiapan-ujian-sma">Persiapan Ujian SMA</h2>
-      <p className=" indent">
+      <p className=" ">
         Les privat juga membantu siswa dalam persiapan menghadapi Ujian
         Nasional, Ujian Sekolah, hingga ujian masuk perguruan tinggi dengan
         metode pembelajaran yang disesuaikan dengan kebutuhan masing-masing
@@ -48,7 +48,7 @@ const LesPrivateSMAHeader = () => {
 
       {/* Section 4 */}
       <h2 id="pengajar-berkualitas-sma">Pengajar Berkualitas dan Terpercaya</h2>
-      <p className=" indent">
+      <p className="">
         Les Privat Matrix menyediakan pengajar berkualitas yang merupakan alumni
         dari universitas ternama, siap membantu siswa mencapai prestasi terbaik
         mereka dengan pendekatan yang sesuai dengan gaya belajar siswa.

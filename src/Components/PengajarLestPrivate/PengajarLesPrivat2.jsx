@@ -12,7 +12,13 @@ const PengajarLestPrivate2 = () => {
         spesialisasi dalam bidang ilmu yang dikuasai.
       </p>
       <div className="centered-image">
-        <img src="/images/pengajar.png" alt="Perguruan Tinggi Logo" />
+        <img
+          loading="lazy"
+          src="/images/pengajar.webp"
+          alt="les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
+          width={"1859"}
+          height={"842"}
+        />
       </div>
     </div>
   );
