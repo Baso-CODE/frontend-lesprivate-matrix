@@ -8,7 +8,12 @@ const ProgramLesPrivat = () => {
       <div className="programs-les-private">
         <div className="program-les-private">
           <div className="feature-header-les-private">
-            <div className="icon">📚</div>
+            <img
+              loading="lazy"
+              className="icon-program"
+              src="/images/program/reguler.webp"
+              alt="Ikon Buku"
+            />
             <h3>Regular</h3>
           </div>
           <p>
@@ -22,7 +27,12 @@ const ProgramLesPrivat = () => {
         </div>
         <div className="program-les-private">
           <div className="feature-header-les-private">
-            <div className="icon">🎓</div>
+            <img
+              loading="lazy"
+              className="icon-program"
+              src="/images/program/toga.webp"
+              alt="Ikon Buku"
+            />
             <h3>Bilingual</h3>
           </div>
           <p>
@@ -36,7 +46,12 @@ const ProgramLesPrivat = () => {
         </div>
         <div className="program-les-private">
           <div className="feature-header-les-private">
-            <div className="icon">💎</div>
+            <img
+              loading="lazy"
+              className="icon-program"
+              src="/images/program/diamond.webp"
+              alt="Ikon Buku"
+            />
             <h3>Platinum</h3>
           </div>
           <p>

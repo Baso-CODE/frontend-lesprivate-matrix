@@ -2,15 +2,16 @@
 
 .les-private-bahasa-list-container {
   padding: 0;
-  margin-top: 12vh;
-  margin-bottom: 10vh;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
 }
 
 .les-private-bahasa-list-container h2 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #333333;
   margin-top: 2rem;
   margin-bottom: 1.8rem;
+  font-family: "Nunito", sans-serif;
 }
 
 .subject-list-les-private-bahasa {
@@ -18,7 +19,6 @@
   padding: 0;
   margin: 0;
   display: grid;
-  gap: 16px; /* Spacing between items */
 }
 
 .subject-list-les-private-bahasa-item {
@@ -38,6 +38,6 @@
 .subject-text {
   flex: 1;
   font-weight: 500;
-  font-family: "Roboto", sans-serif;
+  font-family: "Nunito", sans-serif;
   color: #333333; /* Ganti warna teks sesuai keinginan, misalnya biru */
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Keunggulan.css";
-import keunggulanIcon from "../../assets/keunggulan.png";
+import keunggulanIcon from "../../assets/keunggulan.webp";
 
 const Keunggulan = () => {
   const [keunggulan, setKeunggulan] = useState([]);
@@ -20,17 +20,23 @@ const Keunggulan = () => {
   return (
     <React.Fragment>
       <div className="parent-box-keunggulan">
-        <h1 className="title-keunggulan">
-          <img className="icon-keunggulan" src={keunggulanIcon} alt="Bimbel Privat Masuk PTN - Edumatrix Indonesia" />
-          KEUNGGULAN
-        </h1>
+        <h2 className="title-keunggulan">
+          <img
+            loading="lazy"
+            className="icon-keunggulan"
+            src={keunggulanIcon}
+            alt="les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
+          />
+          Keunggulan
+        </h2>
         <div className="parent-card-keunggulan">
           {keunggulan.map((item, index) => (
             <img
+              loading="lazy"
               key={index}
               className="keunggulan-img"
               src={"https://api.edulink-indonesia.com/images/" + item.image}
-              alt="Bimbel Privat UTBK SNBT Terbaik - Edumatrix Indonesia"
+              alt="les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
             />
           ))}
         </div>

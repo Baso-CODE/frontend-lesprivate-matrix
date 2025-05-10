@@ -4,9 +4,9 @@ import "./LesPrivateTKHeader.css";
 
 const LesPrivateTKHeader = () => {
   return (
-    <section className="centered-content-lesPrivate-sd">
+    <section className="centered-content-lesPrivate-tk">
       <h1 id="les-privat-tk">Les Privat TK – Guru Les Privat Calistung</h1>
-      <p className="indent">
+      <p className="">
         Les Privat TK – Guru TK datang ke rumah siswa di Jabodetabek mengajari
         anak TK/Paud (usia 3-7 tahun). Les privat untuk mengajari buah hati
         belajar Calistung (membaca, menulis, berhitung), menggambar dan mengaji.
@@ -16,7 +16,8 @@ const LesPrivateTKHeader = () => {
 
       <div className="image-lesPrivate">
         <img
-          src="/images/les-private/tk/tk.jpg"
+          loading="lazy"
+          src="/images/les-private/tk/tk.webp"
           alt="Les Privat TK & Calistung"
         />
         <p className="image-caption">Les privat tk terbaik se-jabodetabek</p>
@@ -36,7 +37,7 @@ const LesPrivateTKHeader = () => {
       <h2 id="kegiatan-belajar-masa-taman-kanak-kanak">
         Kegiatan Belajar Masa Taman Kanak-Kanak
       </h2>
-      <p className="indent">
+      <p className="">
         Ketika buah hati sudah beranjak sekolah TK, perkembangan membaca,
         menulis dan berhitung anak merupakan hal penting yang perlu
         di-monitoring perkembangannya. Pengenalan terhadap angka dan huruf harus
@@ -71,7 +72,8 @@ const LesPrivateTKHeader = () => {
       </h2>
       <div className="image-lesPrivate">
         <img
-          src="/images/les-private/tk/tk-paud.png"
+          loading="lazy"
+          src="/images/les-private/tk/TK2.webp"
           alt="Les Privat TK & Calistung"
         />
         <p className="image-caption">

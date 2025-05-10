@@ -5,15 +5,12 @@ import { getAllKotaKabupatenBySlug } from "../../helper/request/getAllKotaKabupa
 const ListKecamatan = () => {
   const [kecamatan, setKecamatan] = useState([]);
   const [kabupaten, setKabupaten] = useState([]);
-  const { slug } = useParams();
-  console.log("ini adalah data dari ", slug);
+  const { kabupatenSlug, kotaSlug } = useParams();
 
   useEffect(() => {
     const fetchKota = async () => {
       try {
-        const response = await getAllKotaKabupatenBySlug(slug);
-        console.log("ini adalah data dari ", response);
-
+        const response = await getAllKotaKabupatenBySlug(kabupatenSlug);
         setKecamatan(response.data.kecamatan);
         setKabupaten(response.data);
       } catch (error) {
@@ -22,15 +19,16 @@ const ListKecamatan = () => {
     };
 
     fetchKota();
-  }, [slug]);
+  }, [kabupatenSlug]);
 
   return (
     <div className="container-all-tab">
       <div className="title-container">
         <img
+          loading="lazy"
           className="icon-city"
-          src={"/images/daftar-kota.png"}
-          alt="City Icon"
+          src={"/images/daftar-kota.webp"}
+          alt="les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
         />
         <h2 className="title-list">
           {`Daftar Kecamatan di ${kabupaten.kota_kabupaten}`}{" "}
@@ -39,7 +37,9 @@ const ListKecamatan = () => {
       <div className="parent-list-kota">
         {kecamatan.length > 0 ? (
           kecamatan.map((item, index) => (
-            <Link to={`/les-privat-di/kecamatan/${item.slug}`}>
+            <Link
+              to={`/les-privat-di-kota/${kotaSlug}/${kabupatenSlug}/${item.slug}`}
+              className="btn-kota">
               {item.kecamatan}
             </Link>
           ))

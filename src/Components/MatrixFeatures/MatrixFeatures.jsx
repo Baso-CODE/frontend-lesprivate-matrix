@@ -14,23 +14,19 @@ import {
 } from "react-icons/fa";
 import "./MatrixFeature.css";
 
-const testimonials = [
-  {
-    text: "Pengajarnya sabar dan telaten. Manajemen Matrix friendly, biarpun tidak bertemu rasanya sangat attentif.",
-    author: "Ibu Dewi P, Jakarta Pusat",
-  },
-  {
-    text: "Kualitas pengajaran sangat baik dan sesuai dengan kebutuhan anak. Proses pendaftaran sangat mudah dan cepat.",
-    author: "Bapak Arief S, Tangerang",
-  },
-  {
-    text: "Guru-gurunya profesional dan sangat membantu anak dalam proses belajarnya. Sangat puas dengan layanan Matrix.",
-    author: "Ibu Rina M, Depok",
-  },
-  {
-    text: "Matrix Education membantu anak saya dalam meningkatkan prestasi akademiknya. Sangat direkomendasikan!",
-    author: "Bapak Yudi A, Bekasi",
-  },
+const subjectList = [
+  "Les Privat Matematika",
+  "Les Privat Fisika",
+  "Les Privat Kimia",
+  "Les Privat Biologi",
+  "Les Privat Ekonomi",
+  "Les Privat Akuntansi",
+  "Les Privat Sejarah",
+  "Les Privat Geografi",
+  "Les Privat Sosiologi",
+  "Les Privat Bahasa Inggris",
+  "Les Privat Bahasa Indonesia",
+  "dan berbagai mata pelajaran yang dibutuhkan oleh Anda.",
 ];
 
 const MatrixFeatures = () => {
@@ -52,7 +48,7 @@ const MatrixFeatures = () => {
             <div className="feature-icon">
               <FaGraduationCap />
             </div>
-            <h3>
+            <h3 className="feature-item-h3">
               Pengajar dari UI, UGM, ITB, IPB, STAN, STIS, UNJ, SSE, UIN dan PT
               Terbaik lainnya
             </h3>
@@ -115,16 +111,17 @@ const MatrixFeatures = () => {
           </div>
         </div>
       </div>
-      <div className="testimonial-container">
-        <h2>Testimonials</h2>
-        {testimonials.map((testimonial, index) => (
-          <div key={index} className="testimonial-item">
-            <p>{testimonial.text}</p>
-            <div className="testimonial-author">
-              <h4>{testimonial.author}</h4>
-            </div>
-          </div>
-        ))}
+      <div className="subject-container">
+        <h2>Semua Mata Pelajaran</h2>
+        <p>
+          Berdasarkan mata pelajaran yang dibutuhkan oleh siswa, Les Privat
+          Matrix siap untuk mendampingi belajar untuk mata pelajaran:
+        </p>
+        <ul className="subject-list">
+          {subjectList.map((subject, index) => (
+            <li key={index}>{subject}</li>
+          ))}
+        </ul>
       </div>
     </div>
   );

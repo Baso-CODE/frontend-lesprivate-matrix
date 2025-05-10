@@ -1,0 +1,135 @@
+.container-halaman-hero-lesprivate {
+  margin-top: 28px;
+  min-height: 80vh;
+  /* background-color: #00139b; */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.content-hero-lesprivate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #00139b;
+  gap: 5px;
+  height: auto;
+}
+.title-halaman-hero-lesprivate {
+  font-size: 36px; /* Ukuran font judul */
+  font-weight: bold; /* Membuat judul menjadi tebal */
+  margin-bottom: 15px; /* Spasi di bawah judul */
+  text-align: left; /* Mengatur teks judul rata kiri */
+  line-height: 1.2; /* Jarak antar garis teks */
+  color: #00139b; /* Warna teks judul */
+  font-family: "Poppins", sans-serif;
+}
+
+.isi-content-hero-lesprivate {
+  flex: 0 0 50%;
+  /* margin-left: 5px; */
+}
+
+.rumah-adat-hero-lesprivate {
+  flex: 0 0 50%;
+  width: 50%;
+  height: auto;
+}
+
+.btn-daftar-sekarang-lesprivate {
+  padding: 12px 24px;
+  background-color: #ffcc00;
+  color: #00139b;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-daftar-sekarang-lesprivate:hover {
+  background-color: #192cc3;
+  color: white;
+}
+
+/* Style for child-paragraf-hero-lesprivate */
+.child-paragraf-hero-lesprivate {
+  font-size: 16px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  color: #192cc3;
+  font-family: "Nunito", sans-serif;
+}
+
+/* Style for child-paragraf-hero-home */
+.child-paragraf-hero-lesprivate-2 {
+  font-size: 16px;
+  color: #192cc3;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  font-family: "Nunito", sans-serif;
+}
+
+.btn-and-icons {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.social-icons {
+  display: flex;
+  gap: 3px;
+}
+
+.social-icon {
+  font-size: 40px;
+  color: #00139b;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #ff9900;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .content-hero-lesprivate {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+  }
+  .title-halaman-hero-home {
+    font-size: 23px; /* Ukuran font lebih kecil untuk layar kecil */
+  }
+  .title-halaman-hero-lesprivate {
+    font-size: 30px; /* Ukuran font judul */
+  }
+
+  .rumah-adat-hero-lesprivate {
+    width: 100%;
+    height: auto;
+  }
+
+  .isi-content-hero-home {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .btn-daftar-sekarang {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 8px;
+  }
+  .btn-and-icons {
+    flex-direction: column; /* Stack vertically */
+    align-items: center; /* Center the items */
+    width: 100%; /* Full width */
+    margin-bottom: 20px;
+    gap: 20px;
+  }
+}

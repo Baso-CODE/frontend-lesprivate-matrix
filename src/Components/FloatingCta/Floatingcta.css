@@ -2,11 +2,10 @@
 .box-float-main {
   position: fixed;
   bottom: 3%;
-  left: 43%;
-  width: 100%;
+  right: 3%;
+
   z-index: 9998;
-  /* background-color: #00b9da; */
-  /* background-color: #054599; */
+
   padding: 10px;
   display: grid;
   justify-content: center;
@@ -41,7 +40,7 @@
   background-color: #00b33c;
   border: 1px solid transparent;
   color: white;
-  padding: 15px;
+  padding: 8px;
   /* padding-left: 6px; */
   border-radius: 100px;
   cursor: pointer;
@@ -65,8 +64,10 @@
 }
 
 .icon-wa {
-  font-size: 25px;
+  width: 50px; /* Atur ukuran lebar gambar sesuai keinginan Anda */
+  height: 50px; /* Atur ukuran tinggi gambar sesuai keinginan Anda */
 }
+
 .label-cta {
   background: rgba(221, 221, 221, 0.87);
   font-size: 13px;
@@ -75,16 +76,26 @@
   font-weight: 600;
 }
 
-/* RESPONSIVE */
-@media only screen and (min-width: 320px) and (max-width: 896px) {
+@media (max-width: 820px) {
   .box-float-main {
-    left: 25%;
-    bottom: 2%;
+    right: 2%;
+    bottom: 3%;
   }
 }
-/* @media only screen and (max-width: 820px) {
+
+@media (max-width: 768px) {
   .box-float-main {
-    left: 38%;
+    left: 49%;
     bottom: 2%;
+    .icon-wa {
+      width: 30px; /* Atur ukuran lebar gambar sesuai keinginan Anda */
+      height: 30px; /* Atur ukuran tinggi gambar sesuai keinginan Anda */
+    }
   }
-} */
+  .btn-float-wa {
+    padding: 10px;
+  }
+  .label-cta {
+    font-size: 12px;
+  }
+}

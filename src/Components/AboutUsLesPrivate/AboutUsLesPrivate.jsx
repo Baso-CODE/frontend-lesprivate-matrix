@@ -1,8 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 // import Bottombar from "../BottomBar/Bottombar";
-import Floatingcta from "../FloatingCta/Floatingcta";
-import Navbar from "../Navbar/Navbar";
 import PengajarLestPrivate2 from "../PengajarLestPrivate/PengajarLesPrivat2";
 import AboutUsHistoryAndSuccess from "./AboutUsHIstoryAndSuccesLesPrivate/AboutUsHistoryAndSuceesLesPrivate";
 import "./AboutUsLesPrivate.css";
@@ -13,18 +11,50 @@ const AboutUsLesPrivate = () => {
     <React.Fragment>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Tentang Kami - #1 Edumatrix Indonesia</title>
-        <link rel="canonical" href="/tentang-kami" />
+        <title>Tentang Kami - #1 Matrix Tutoring</title>
+        <meta
+          name="description"
+          content="Matrix Tutoring menyediakan layanan les privat dengan pengajar berkualitas tinggi untuk semua tingkatan pendidikan. Temukan visi dan misi kami untuk meningkatkan potensi akademik siswa."
+        />
+        <meta
+          name="keywords"
+          content="les privat, guru privat, pendidikan, visi dan misi, pengajar berkualitas, edumatrix"
+        />
+        <meta name="author" content="Matrix Tutoring" />
+        <meta
+          property="og:title"
+          content="Tentang Kami - #1 Edumatrix Indonesia"
+        />
+        <meta
+          property="og:description"
+          content="Matrix Tutoring menyediakan layanan les privat dengan pengajar berkualitas tinggi untuk semua tingkatan pendidikan. Temukan visi dan misi kami untuk meningkatkan potensi akademik siswa."
+        />
+        <meta
+          property="og:image"
+          content="https://apps.bimbelmatrix.com/images/about-us/hero-about.png"
+        />
+        <meta property="og:url" content={window.location.href} />
+        <meta property="og:type" content="website" />
+        <link
+          rel="canonical"
+          href="/https://apps.bimbelmatrix.com/tentang-kami"
+        />
       </Helmet>
-      <Navbar />
+
       <div className="container-all">
         <div className="about-us">
-          <header className="about-us-header">
-            <h1>Tentang Kami</h1>
-          </header>
+          <div className="about-us-header">
+            <h1>Tentang Matrix Tutoring</h1>
+          </div>
           <section className="about-us-content">
             <div className="about-us-image">
-              <img src="/images/about-us/hero-about.png" alt="About Us" />
+              <img
+                src="/images/about-us/hero-about.webp"
+                alt="les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
+                width={"768"}
+                height={"711"}
+                loading="lazy"
+              />
             </div>
 
             {/* pengajar les private */}
@@ -55,7 +85,7 @@ const AboutUsLesPrivate = () => {
         </div>
       </div>
 
-      <Floatingcta />
+      {/* <Floatingcta /> */}
       {/* <Bottombar /> */}
     </React.Fragment>
   );

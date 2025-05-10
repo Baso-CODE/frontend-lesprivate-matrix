@@ -1,19 +1,23 @@
+import { useEffect, useState } from "react";
 import "./SekolahSiswaMarque.css";
 import Marquee from "react-fast-marquee";
-
-const images = [
-  "/images/asal-sekolah/1.jpeg",
-  "/images/asal-sekolah/2.jpeg",
-  "/images/asal-sekolah/3.jpeg",
-  "/images/asal-sekolah/4.jpeg",
-  "/images/asal-sekolah/5.jpeg",
-  "/images/asal-sekolah/6.jpeg",
-  "/images/asal-sekolah/7.jpeg",
-  "/images/asal-sekolah/8.jpeg",
-  "/images/asal-sekolah/9.jpeg",
-];
+import { getIsDeletedAsalSekolahSiswaRequest } from "../../helper/request/getIsDeletedAsalSekolahSiswaRequest";
 
 const AsalSekolahSiswaMarque = () => {
+  const [schoolImages, setSchoolImages] = useState([]);
+
+  useEffect(() => {
+    const fetchSchoolImages = async () => {
+      try {
+        const response = await getIsDeletedAsalSekolahSiswaRequest();
+        setSchoolImages(response.data);
+      } catch (error) {
+        console.error("error fetching data asal sekolah siswa", error);
+      }
+    };
+    fetchSchoolImages();
+  }, []);
+
   return (
     <div className="container-asal-sekolah-siswa-marque">
       <div className="">
@@ -24,8 +28,15 @@ const AsalSekolahSiswaMarque = () => {
             speed={85}
             gradient={false}
             className="marquee-grid">
-            {images.map((src, index) => (
-              <img key={index} src={src} alt={`Logo ${index + 1}`} />
+            {schoolImages.map((image, index) => (
+              <img
+                loading="lazy"
+                key={index}
+                src={`https://node-osn.edulink-indonesia.com/asalSekolahSiswa-images/${image.foto_sekolah}`}
+                alt={`asal sekolah siswa les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) ${
+                  index + 1
+                } - Matrix Tutoring `}
+              />
             ))}
           </Marquee>
         </div>

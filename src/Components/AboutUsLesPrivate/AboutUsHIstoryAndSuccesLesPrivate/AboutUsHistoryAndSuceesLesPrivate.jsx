@@ -6,7 +6,13 @@ const AboutUsHistoryAndSuccess = () => {
     <section className="about-us-history-and-success">
       <div className="about-us-section history">
         <div className="about-us-image-history-and-success">
-          <img src={"/images/about-us/history-us.png"} alt="History" />
+          <img
+            src={"/images/about-us/history-us.webp"}
+            alt="les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
+            width={"1269"}
+            height={"1269'"}
+            loading="lazy"
+          />
         </div>
         <div className="about-us-description">
           <h2>History</h2>
@@ -49,7 +55,13 @@ const AboutUsHistoryAndSuccess = () => {
           <p>Terima kasih atas kepercayaan Anda.</p>
         </div>
         <div className="about-us-image-history-and-success">
-          <img src={"/images/about-us/succes-story.png"} alt="Succes story" />
+          <img
+            src={"/images/about-us/succes-story.webp"}
+            alt="les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
+            height={"1152"}
+            width={"834"}
+            loading="lazy"
+          />
         </div>
       </div>
     </section>

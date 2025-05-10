@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 20px;
+
   text-align: left;
   flex-direction: column;
 }
@@ -23,8 +23,12 @@
 
 .description-text p {
   margin: 0 0 10px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+  text-align: start;
+  font-style: normal;
 }
 
 @media (min-width: 1024px) {
@@ -47,14 +51,14 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 20px;
+
   text-align: center;
   flex-direction: column;
 }
 
 .logo-image {
   max-width: 100%;
-  height: auto;
+  height: 50%;
   margin-bottom: 20px;
   flex: 1 1 100%;
 }
@@ -85,4 +89,31 @@
     flex: 1 1 60%; /* Sesuaikan proporsi teks */
     font-size: 18px; /* Besarkan ukuran font untuk layar besar */
   }
+}
+
+.menu-toggle {
+  background-color: transparent; /* Make background transparent */
+  border: none; /* Remove border */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  font-size: 24px; /* Adjust font size */
+  color: #333; /* Set default icon color */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+  padding: 10px; /* Add padding for better click area */
+  margin: 0; /* Reset margin */
+}
+
+/* Change color on hover */
+.menu-toggle:hover {
+  color: #646cff; /* Change color on hover */
+}
+
+/* Change color when the menu is open */
+.menu-toggle:focus {
+  outline: none; /* Remove default focus outline */
+}
+
+/* Add styles for the icon size */
+.menu-toggle svg {
+  width: 1.5em; /* Set icon width */
+  height: 1.5em; /* Set icon height */
 }

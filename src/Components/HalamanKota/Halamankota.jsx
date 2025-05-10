@@ -2,36 +2,33 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useParams } from "react-router-dom";
-import rumahAdat from "../../assets/rumah_adat.png";
 import { getAllKotBySlug } from "../../helper/request/getAllKotaBySlug";
 import PromoHomepage from "../../Home/PromoHomepage/PromoHomepage";
 import BannerComponent from "../Banner/Banner";
-import PromoFree from "../BannerPromo/PromoFree";
 import FiturProgram from "../FiturProgram/FiturProgram";
-import Floatingcta from "../FloatingCta/Floatingcta";
 import Keunggulan from "../Keunggulan/Keunggulan";
 import LogoDescriptionComponent from "../LogoDescription/LogoDescription";
-import MasterCarousel from "../MasterCarousel/MasterCarousel";
+import MasterTeacher from "../MasterTeacher/MasterTeacher";
 import MatrixFeatures from "../MatrixFeatures/MatrixFeatures";
-import Navbar from "../Navbar/Navbar";
 import OnlineLesOptions from "../OnlineLesOption/OnlineLesOption";
 import PengajarLestPrivate from "../PengajarLestPrivate/PengajarLestPrivate";
 import ProgramBelajarLesPrivat from "../ProgramBelajarLesPrivate/ProgramBelajarLesPrivate";
 import ProgramLesPrivat from "../ProgramLesPrivate/ProgramLesPrivate";
 import PilihanProgram from "../ProgramOptions/PilihanProgram";
 import AsalSekolahSiswaMarque from "../SekolahSiswaMarque/SekolahSiswaMarque";
-import Slidertop from "../SlideTop/Slidertop";
+import EmbrelaSlider from "../SlideTop/EmbrelaSlider";
 import SuccessStoryLesPrivate from "../SuccesStoryLesPrivate/SuccesStoryLesPrivate";
 import ListKabupaten from "../Tab/ListKabupaten";
 import "./Halamankota.css";
 
 const Halamankota = () => {
   const [kota, setKota] = useState([]);
-  const { slug } = useParams();
+
+  const { kotaSlug } = useParams();
   useEffect(() => {
     const fetchKota = async () => {
       try {
-        const response = await getAllKotBySlug(slug);
+        const response = await getAllKotBySlug(kotaSlug);
 
         setKota(response.data);
       } catch (error) {
@@ -40,34 +37,75 @@ const Halamankota = () => {
     };
 
     fetchKota();
-  }, [slug]);
+  }, [kotaSlug]);
 
   return (
     <React.Fragment>
       <Helmet>
-        <meta
-          charSet="utf-8"
-          name="robots"
-          content="Bimbel Les Privat TK, SD, SMP, SMA, OSN, UTBK SNBT, SIMAK UI, UM PTN & CBT UGM terbaik dengan sistem belajar mengajar yang berkualitas #1 - Matrix Indonesia"
-        />
+        <meta charSet="utf-8" />
         <title>
-          Les Privat di {`${kota.kota}`} - TK, SD, SMP, SMA, UTBK SNBT, SIMAK
-          UI, UM PTN & CBT UGM - Bimbel di {`${kota.kota}`} Terbaik #1 - Matrix
-          Indonesia
+          Les Privat {`${kota.kota}`} TK SD SMP SMA OSN UTBK SNBT SIMAK UI CBT
+          UGM & Mahasiswa Online & Guru Datang ke Rumah
         </title>
-        <link rel="canonical" href="" />
-      </Helmet>
-      <Navbar />
-      <div className="container-halaman-kota">
+        <meta
+          name="description"
+          content={`Les Privat ${kota.kota} Datang ke Rumah & Online TK SD SMP SMA OSN UTBK SNBT SIMAK UI CBT UGM & Mahasiswa Bimbel berkualitas, guru les privat dari UI UGM ITB dan PTN terbaik`}
+        />
+        <meta
+          name="keywords"
+          content={`Les Terbaik, ${kota.kota}, Guru Les Profesiona, Les untuk Anak , Les Privat Online, Les Privat ke Rumah, Bimbel , Les Privat SD, SMP, SMA , Les SIMAK UI, Les UM PTN, Les CBT UGM, pendidikan, tutor berkualitas, belajar efektif`}
+        />
+        <meta name="author" content="Matrix Tutoring" />
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph Meta Tags */}
+        <meta
+          property="og:title"
+          content={`Les Privat di ${kota.kota} TK SD SMP SMA OSN UTBK SNBT SIMAK UI CBT
+          UGM & Mahasiswa  Online & Guru Datang ke Rumah`}
+        />
+        <meta
+          property="og:description"
+          content={`Les Privat ${kota.kota} Datang ke Rumah & Online TK SD SMP SMA OSN UTBK SNBT SIMAK UI CBT UGM & Mahasiswa Bimbel berkualitas, guru les privat dari UI UGM ITB dan PTN terbaik`}
+        />
+        <meta
+          property="og:image"
+          content="https://apps.bimbelmatrix.com/images/DSIKON_BULANAN.webp"
+        />
+        <meta property="og:url" content={window.location.href} />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href={window.location.href} />
+        {/* Twitter Card Meta Tags */}
+        <meta
+          name="twitter:card"
+          content="https://apps.bimbelmatrix.com/images/DSIKON_BULANAN.webp"
+        />
+        <meta
+          name="twitter:title"
+          content={`Les Privat di ${kota.kota} TK SD SMP SMA OSN UTBK SNBT SIMAK UI CBT
+          UGM & Mahasiswa  Online & Guru Datang ke Rumah`}
+        />
+        <meta
+          name="twitter:description"
+          content={`Les Privat ${kota.kota} Datang ke Rumah & Online TK SD SMP SMA OSN UTBK SNBT SIMAK UI CBT UGM & Mahasiswa Bimbel berkualitas, guru les privat dari UI UGM ITB dan PTN terbaik`}
+        />
+        <meta
+          name="twitter:image"
+          content="https://apps.bimbelmatrix.com/images/DSIKON_BULANAN.webp"
+        />
+      </Helmet>{" "}
+      <div className="container-all">
         <div className="content-kota">
           <div className="teks-content">
             <h1 className="title-halaman-kota">
-              Les Privat di {kota.kota} - TK, SD, SMP, SMA, UTBK SNBT, SIMAK UI,
-              UM PTN & CBT UGM Terbaik
+              Les Privat di{" "}
+              <span className="highlight-yellow-kota">{kota.kota}</span> - TK,
+              SD, SMP, SMA, UTBK SNBT, SIMAK UI, UM PTN & CBT UGM{" "}
+              <span className="highlight-yellow-kota">Terbaik</span>
             </h1>
 
             <div className="paragraf-kota">
-              <p>
+              <p className="child-paragraf-kota">
                 Bimbel Les Privat di Kota {kota.kota} untuk TK, SD, SMP, SMA,
                 UN/AKM, OSN, CPNS, LPDP, PPDS, SIMAK UI, UTBK SNBT, CBT UGM,
                 UMPTN.
@@ -75,54 +113,41 @@ const Halamankota = () => {
               <p className="child-paragraf-kota">
                 Dapatkan layanan Les Privat kapan pun dan dimana pun dengan
                 lebih dari 5.000 Master Teacher Matrix yang siap memberikan
-                pelayanan terbaik.
+                pelayanan{" "}
+                <span className="highlight-yellow-kota">terbaik.</span>
               </p>
             </div>
           </div>
-          <a className="parent-img-modeltanya-program" href="">
-            <img
-              className="rumah-adat"
-              src={rumahAdat}
-              alt="Les Privat Terbaik"
-            />
-          </a>
 
-          {/* <a
-            className="parent-img-modeltanya-program"
-            href="https://wa.me/6285747281466?text=Halo%20Kak%20Linda%20Saya%20ingin%20tanya%20les%20privat%20untuk%20Kelas%20:%0aMapel%20:%20%0aKurikulum%20:%20%0aWilayah%20:">
-            <img
-              className="model-program-kota"
-              src={tanyaProgram}
-              alt="Les Privat Terbaik"
-            />
-          </a> */}
+          <img
+            loading="eager"
+            className="rumah-adat"
+            src={kota.url}
+            alt={`les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) di${kota.kota} - Matrix Tutoring`}
+          />
         </div>
-        <Slidertop />
+        <EmbrelaSlider />
+        {/* <Slidertop /> */}
         <BannerComponent />
         <LogoDescriptionComponent />
         <PengajarLestPrivate />
         <FiturProgram />
-        <PromoFree />
+        {/*    {/* <PromoFree /> */}
         <PilihanProgram />
         <OnlineLesOptions />
         <ProgramLesPrivat />
-        <MasterCarousel />
+        <MasterTeacher />
         <ProgramBelajarLesPrivat />
         <MatrixFeatures />
-
         <SuccessStoryLesPrivate />
         {/* <TestimoniLestPrivate /> */}
-
-        <Keunggulan />
-
-        <ListKabupaten />
-
         <AsalSekolahSiswaMarque />
+        <Keunggulan />
+        <ListKabupaten />
+        {/* <AccordionFAQ /> */}
         <PromoHomepage />
       </div>
-
-      {/* <Bottombar /> */}
-      <Floatingcta />
+      {/* <Floatingcta /> */}
     </React.Fragment>
   );
 };

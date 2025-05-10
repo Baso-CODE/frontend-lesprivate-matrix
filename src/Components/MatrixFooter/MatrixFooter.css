@@ -1,5 +1,5 @@
 .footer-container-matrix {
-  background-color: #011cde;
+  background-color: #0b192c;
 }
 
 .footer-content-matrix {
@@ -16,7 +16,7 @@
 
 .grid-container-footer-matrix {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr); /* 4 kolom */
   gap: 1.5rem;
 }
 
@@ -35,22 +35,23 @@
 
 .section-title-footer-matrix {
   font-size: 1.125rem;
-  font-weight: bold;
-  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-family: "Montserrat", serif;
   margin-bottom: 0.9rem;
+  margin-top: 1rem;
 }
 
 .section-subtitle-footer-matrix {
   font-size: 1rem;
-  font-weight: bold;
-  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-family: "Montserrat", serif;
   margin-bottom: 0.5rem;
 }
 
 .address-footer-matrix,
 .phone-list-footer-matrix,
 .office-hours-footer-matrix {
-  font-family: "Roboto", sans-serif;
+  font-family: "Nunito", sans-serif;
   margin-bottom: 0.4rem;
 }
 
@@ -68,7 +69,7 @@
 .phone-list-footer-matrix li a {
   color: white; /* Sesuaikan dengan warna teks sebelumnya */
   text-decoration: none; /* Hilangkan underline */
-  font-family: "Roboto", sans-serif; /* Pertahankan font yang sama */
+  font-family: "Nunito", sans-serif; /* Pertahankan font yang sama */
   display: inline-block; /* Agar padding dan margin bekerja dengan baik */
   padding: 0.2rem 0; /* Tambahkan padding sesuai kebutuhan */
   transition: color 0.3s ease; /* Tambahkan transisi untuk efek hover */
@@ -81,7 +82,7 @@
 }
 
 .member-logo-footer-matrix {
-  width: 86%;
+  width: 100%;
   height: auto;
   border-radius: 0.375rem;
 }
@@ -93,10 +94,10 @@
 
 .footer-copyright-matrix,
 .footer-location-matrix {
-  margin-top: 1rem;
+  margin-top: 0.7rem;
   text-align: center;
-  font-size: 0.75rem;
-  font-family: "Oswald", sans-serif;
+  font-size: 0.7rem;
+  font-family: "Montserrat", serif;
 }
 
 .footer-matrix-image {
@@ -110,5 +111,13 @@
 @media (max-width: 768px) {
   .footer-matrix-image {
     width: 100%; /* Make image full width on mobile */
+  }
+
+  .footer-copyright-matrix,
+  .footer-location-matrix {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.6rem;
+    font-family: "Montserrat", serif;
   }
 }

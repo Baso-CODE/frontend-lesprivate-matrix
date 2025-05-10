@@ -5,12 +5,13 @@ import { getAllKecamatanBySlug } from "../../helper/request/getAllKecamatanBySlu
 const ListKelurahan = () => {
   const [kelurahan, setKelurahan] = useState([]);
   const [kecamatan, setKecamatan] = useState([]);
-  const { slug } = useParams();
+  const { kecamatanSlug, kabupatenSlug, kotaSlug } = useParams();
   useEffect(() => {
     const fetchKota = async () => {
       try {
-        const response = await getAllKecamatanBySlug(slug);
+        const response = await getAllKecamatanBySlug(kecamatanSlug);
         setKelurahan(response.data.kelurahan);
+
         setKecamatan(response.data);
       } catch (error) {
         console.error("Failed to fetch kecamatan data:", error);
@@ -18,15 +19,16 @@ const ListKelurahan = () => {
     };
 
     fetchKota();
-  }, [slug]);
+  }, [kecamatanSlug]);
 
   return (
     <div className="container-all-tab">
       <div className="title-container">
         <img
+          loading="lazy"
           className="icon-city"
-          src={"/images/daftar-kota.png"}
-          alt="City Icon"
+          src={"/images/daftar-kota.webp"}
+          alt="les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
         />
         <h2 className="title-list">
           {`Daftar Kelurahan di ${kecamatan.kecamatan || "..."}`}
@@ -38,9 +40,7 @@ const ListKelurahan = () => {
             <Link
               className="btn-kota"
               key={index}
-              onClick={() => {
-                window.location.href = `/les-privat-di/kelurahan/${item.slug}`;
-              }}>
+              to={`/les-privat-di-kota/${kotaSlug}/${kabupatenSlug}/${kecamatanSlug}/${item.slug}`}>
               {item.kelurahan}
             </Link>
           ))

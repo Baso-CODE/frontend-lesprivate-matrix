@@ -3,13 +3,13 @@ import Marquee from "react-fast-marquee";
 import "./MediaMassaMarquee.css";
 
 const images = [
-  "/images/media/kompas.png",
-  "/images/media/krjogja.png",
-  "/images/media/idn.png",
-  "/images/media/kumparan.png",
-  "/images/media/liputan.png",
-  "/images/media/jogja-aja.png",
-  "/images/media/tribunjogja.png",
+  "/images/media/kompas.webp",
+  "/images/media/krjogja.webp",
+  "/images/media/idn.webp",
+  "/images/media/kumparan.webp",
+  "/images/media/liputan.webp",
+  "/images/media/jogja-aja.webp",
+  "/images/media/tribunjogja.webp",
 ];
 
 const MediaMassaMarquee = () => {
@@ -30,7 +30,14 @@ const MediaMassaMarquee = () => {
           gradient={false} // No gradient effect
           className="marquee-media">
           {images.map((src, index) => (
-            <img key={index} src={src} alt={`Logo ${index + 1}`} />
+            <img
+              loading="lazy"
+              key={index}
+              src={src}
+              alt={`les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring ${
+                index + 1
+              }`}
+            />
           ))}
         </Marquee>
       </div>
@@ -43,7 +50,14 @@ const MediaMassaMarquee = () => {
           gradient={false} // No gradient effect
           className="marquee-media">
           {images.map((src, index) => (
-            <img key={index} src={src} alt={`Logo ${index + 1}`} />
+            <img
+              loading="lazy"
+              key={index}
+              src={src}
+              alt={`les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring ${
+                index + 1
+              }`}
+            />
           ))}
         </Marquee>
       </div>

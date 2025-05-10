@@ -9,13 +9,13 @@ const AsalSekolahSiswaEdumatrix = () => {
         <div className="title-section">
           <h2 className="title-asal-sekolah">Asal Sekolah Siswa Edumatrix</h2>
           <div className="scrollable-content">
-            <div className="grid-container-asal-sekolah-siswa-edumatrix">
+            <ul className="grid-container-asal-sekolah-siswa-edumatrix">
               {schools.map((school, index) => (
-                <div key={index} className="grid-item">
+                <li key={index} className="grid-item">
                   {school}
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
       </div>

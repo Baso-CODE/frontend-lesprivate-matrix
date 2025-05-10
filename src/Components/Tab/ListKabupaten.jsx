@@ -5,14 +5,13 @@ import { getAllKotBySlug } from "../../helper/request/getAllKotaBySlug";
 const ListKabupaten = () => {
   const [kabupaten, setKabupaten] = useState([]);
   const [kota, setKota] = useState([]);
-  const { slug } = useParams();
+  const { kotaSlug } = useParams();
   useEffect(() => {
     const fetchKota = async () => {
       try {
-        const response = await getAllKotBySlug(slug);
+        const response = await getAllKotBySlug(kotaSlug);
 
         setKota(response.data);
-        console.log("ini adalah data response", response.data);
 
         setKabupaten(response.data.ibukotakabupaten);
       } catch (error) {
@@ -21,15 +20,16 @@ const ListKabupaten = () => {
     };
 
     fetchKota();
-  }, [slug]);
+  }, [kotaSlug]);
 
   return (
     <div className="container-all-tab">
       <div className="title-container">
         <img
+          loading="lazy"
           className="icon-city"
-          src={"/images/daftar-kota.png"}
-          alt="City Icon"
+          src={"/images/daftar-kota.webp"}
+          alt="les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
         />
         <h2 className="title-list">{`Daftar Kabupaten di ${kota.kota}`} </h2>
       </div>
@@ -38,9 +38,7 @@ const ListKabupaten = () => {
           <Link
             className="btn-kota"
             key={index}
-            onClick={() => {
-              window.location.href = `/les-privat-di/${item.slug}`;
-            }}>
+            to={`/les-privat-di-kota/${kotaSlug}/${item.slug}`}>
             {item.kota_kabupaten}
           </Link>
         ))}

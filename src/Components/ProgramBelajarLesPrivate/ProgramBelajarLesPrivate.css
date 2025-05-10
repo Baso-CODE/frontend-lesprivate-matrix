@@ -1,26 +1,25 @@
 .programBelajar-section {
   text-align: start;
 
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 5vh;
 }
 
 .programBelajar-title {
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 10px;
   color: #333333;
-  font-weight: 600;
-  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
 }
 
 .programBelajar-description {
   font-size: 16px;
-  color: #333333;
+  color: #4f4f4f;
   margin-bottom: 30px;
   line-height: 1.5;
   max-width: 100%;
-  font-family: "Roboto", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 500;
 }
 
@@ -60,20 +59,30 @@
 }
 
 /* 2 items per row on small tablets (between 480px and 767px) */
-@media (min-width: 480px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .programBelajar-card {
     width: calc(50% - 20px); /* 2 cards per row, subtracting gap */
   }
 }
 
 /* 1 item per row on mobile (below 480px) */
-@media (max-width: 479px) {
+/* @media (max-width: 479px) {
   .programBelajar-card {
-    width: 100%; /* 1 card per row */
+    width: 100%; 
   }
-}
+} */
 
 .programBelajar-card img {
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 768px) {
+  .programBelajar-title {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .programBelajar-description {
+    font-size: 14px;
+  }
 }

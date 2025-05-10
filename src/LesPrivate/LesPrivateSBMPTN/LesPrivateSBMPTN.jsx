@@ -1,10 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import AsalSekolahSiswaEdumatrix from "../../Components/AsalSekolahSiswa/AsalSekolahSiswa";
-import PromoFree from "../../Components/BannerPromo/PromoFree";
 import FiturProgram from "../../Components/FiturProgram/FiturProgram";
-import Floatingcta from "../../Components/FloatingCta/Floatingcta";
-import MasterCarousel from "../../Components/MasterCarousel/MasterCarousel";
+import Keunggulan from "../../Components/Keunggulan/Keunggulan";
+import MasterTeacher from "../../Components/MasterTeacher/MasterTeacher";
 import MatrixFeatures from "../../Components/MatrixFeatures/MatrixFeatures";
 import OnlineLesOptions from "../../Components/OnlineLesOption/OnlineLesOption";
 import PengajarLestPrivate from "../../Components/PengajarLestPrivate/PengajarLestPrivate";
@@ -12,10 +11,10 @@ import ProgramBelajarLesPrivat from "../../Components/ProgramBelajarLesPrivate/P
 import ProgramLesPrivat from "../../Components/ProgramLesPrivate/ProgramLesPrivate";
 import PilihanProgram from "../../Components/ProgramOptions/PilihanProgram";
 import AsalSekolahSiswaMarque from "../../Components/SekolahSiswaMarque/SekolahSiswaMarque";
-import Slidertop from "../../Components/SlideTop/Slidertop";
+import EmbrelaSlider from "../../Components/SlideTop/EmbrelaSlider";
 import SuccessStoryLesPrivate from "../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
-import Listkota from "../../Components/Tab/Listkota";
 import PromoHomepage from "../../Home/PromoHomepage/PromoHomepage";
+import ListKotaProgramLesPrivate from "../components/ListKotaProgramLesPrivate/ListKotaProgramLesPrivate";
 import TableOfContents from "../components/TableOfContent";
 import LesPrivateSBMPTNHeader from "./components/LesPrivateSBMPTNHeader";
 
@@ -81,7 +80,7 @@ const LesPrivateSBMPTN = () => {
     <React.Fragment>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Les Privat SBMPTN Terbaik #1 - Les Private Matrix</title>
+        <title>Les Privat SBMPTN Terbaik #1 Les Private Matrix</title>
         <meta name="robots" content="index, follow" />
         <meta
           name="description"
@@ -116,7 +115,7 @@ const LesPrivateSBMPTN = () => {
         {/* Open Graph Meta Tags */}
         <meta
           property="og:title"
-          content="Les Privat SBMPTN Terbaik #1 - Guru Les Privat SBMPTN"
+          content="Les Privat SBMPTN Terbaik #1 Guru Les Privat SBMPTN"
         />
         <meta
           property="og:description"
@@ -129,7 +128,7 @@ const LesPrivateSBMPTN = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://dblpm.edulink-indonesia.com/promo-images/IMG1725949265851.png"
+          content="https://apps.bimbelmatrix.com/images/DSIKON_BULANAN.webp"
         />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -137,12 +136,12 @@ const LesPrivateSBMPTN = () => {
         {/* Twitter Card Meta Tags */}
         <meta
           name="twitter:card"
-          content="https://dblpm.edulink-indonesia.com/promo-images/IMG1725949265851.png"
+          content="https://apps.bimbelmatrix.com/images/DSIKON_BULANAN.webp"
         />
         <meta name="twitter:site" content="@matrix_tutoring" />
         <meta
           name="twitter:title"
-          content="Les Privat SBMPTN Terbaik #1 - Guru Les Privat SBMPTN"
+          content="Les Privat SBMPTN Terbaik #1 Guru Les Privat SBMPTN"
         />
         <meta
           name="twitter:description"
@@ -150,11 +149,12 @@ const LesPrivateSBMPTN = () => {
         />
         <meta
           name="twitter:image"
-          content="https://dblpm.edulink-indonesia.com/promo-images/IMG1725949265851.png"
+          content="https://apps.bimbelmatrix.com/images/DSIKON_BULANAN.webp"
         />
       </Helmet>
       <div className="container-all">
-        <Slidertop />
+        <EmbrelaSlider />
+        {/* <Slidertop /> */}
         <TableOfContents title="Table of Contents" items={items} />
         <LesPrivateSBMPTNHeader />
         <section id="pengajar-les-private">
@@ -163,7 +163,7 @@ const LesPrivateSBMPTN = () => {
         <section id="fitur-program-les-private">
           <FiturProgram />
         </section>
-        <PromoFree />
+        {/*    {/* <PromoFree /> */}
         <section id="pilihan-program-les-private">
           <PilihanProgram />
         </section>
@@ -173,7 +173,7 @@ const LesPrivateSBMPTN = () => {
         <section id="program-les-private-edumatrix">
           <ProgramLesPrivat />
         </section>
-        <MasterCarousel />
+        <MasterTeacher />
         <ProgramBelajarLesPrivat />
         <MatrixFeatures />
         <SuccessStoryLesPrivate />
@@ -181,13 +181,16 @@ const LesPrivateSBMPTN = () => {
           <AsalSekolahSiswaEdumatrix />
           <AsalSekolahSiswaMarque />
         </section>
-
-        <Listkota />
-
+        <Keunggulan />
+        {/* <AccordionFAQ /> */}
+        <ListKotaProgramLesPrivate
+          program={"les-privat-sbmptn"}
+          title={"Les Privat SBMPTN"}
+        />
         <PromoHomepage />
       </div>
 
-      <Floatingcta />
+      {/* <Floatingcta /> */}
       {/* <Bottombar /> */}
     </React.Fragment>
   );

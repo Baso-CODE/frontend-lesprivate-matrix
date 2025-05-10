@@ -11,7 +11,7 @@
   color: white;
   background-color: #00139b;
   border-radius: 10px;
-  margin-top: 20px;
+  margin-top: 80px;
 }
 .isi-content-kabupaten {
   display: flex;
@@ -23,6 +23,7 @@
 }
 .title-halaman-kabupaten {
   font-size: 30px;
+  font-family: "Poppins", sans-serif;
   font-weight: 800;
 }
 .child-paragraf-kabupaten {
@@ -32,8 +33,10 @@
 .paragraf-kabupaten {
   margin-top: 20px;
   color: white;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
 }
-.teks-content {
+.teks-content-kabupaten {
   display: grid;
   gap: 20px;
 }
@@ -47,7 +50,7 @@
   .content-kabupaten {
     display: grid;
   }
-  .teks-content {
+  .teks-content-kabupaten {
     margin-top: 65px;
   }
   .model-halaman-kabupaten {
@@ -67,7 +70,7 @@
     padding-left: 3%;
     padding-right: 3%;
   }
-  .teks-content {
+  .teks-content-kabupaten {
     margin-top: 50px;
     text-align: justify;
   }
@@ -80,7 +83,7 @@
     padding-left: 3%;
     padding-right: 3%;
   }
-  .teks-content {
+  .teks-content-kabupaten {
     margin-top: 50px;
     text-align: justify;
   }
@@ -93,7 +96,7 @@
     padding-left: 3%;
     padding-right: 3%;
   }
-  .teks-content {
+  .teks-content-kabupaten {
     margin-top: 50px;
     text-align: justify;
   }

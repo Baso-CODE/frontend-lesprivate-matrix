@@ -19,10 +19,11 @@
 
 .toc-title {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 600;
   display: flex;
   align-items: center;
   color: #333333;
+  font-family: "Poppins", sans-serif;
 }
 
 .toc-icon {
@@ -61,6 +62,7 @@
   padding-left: 20px;
   list-style-type: circle;
   margin-top: 8px;
+  font-family: "Nunito", sans-serif;
 }
 
 .toc-subitem {
@@ -74,4 +76,10 @@
 
 .toc-sublink:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .toc-title {
+    font-size: 16px;
+  }
 }

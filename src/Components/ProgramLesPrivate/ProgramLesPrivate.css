@@ -1,9 +1,13 @@
+.program-les-privat-container {
+  margin-top: 4vh;
+}
+
 .program-title {
   font-size: 28px;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 20px;
-  color: #333;
-  font-family: "Oswald", sans-serif;
+  color: #333333;
+  font-family: "Poppins", sans-serif;
   text-align: center;
 }
 
@@ -16,7 +20,7 @@
 .program-les-private {
   background-color: #f5f5f5;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow */
 }
@@ -30,25 +34,28 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-bottom: 10px;
 }
 
-.icon {
-  font-size: 30px;
+.icon-program {
+  width: 60px;
+
+  height: 60px;
 }
 
 .program-les-private h3 {
-  font-size: 24px;
+  font-size: 20px;
   margin: 0;
   font-weight: 500;
-  color: #333333;
-  font-family: "Oswald", sans-serif;
+  color: #333;
+  font-family: "Poppins", sans-serif;
 }
 
 .programs-les-private p {
-  font-size: 14px;
-  color: #666;
+  font-size: 16px;
+  color: #4f4f4f;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 400;
 }
 
@@ -63,5 +70,14 @@
 @media (max-width: 768px) {
   .programs-les-private {
     grid-template-columns: 1fr;
+  }
+  .program-title {
+    font-size: 24px;
+  }
+  .program-les-private h3 {
+    font-size: 18px;
+  }
+  .program-les-private p {
+    font-size: 14px;
   }
 }

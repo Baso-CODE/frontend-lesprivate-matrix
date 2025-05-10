@@ -1,9 +1,15 @@
-import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import "./Floatingcta.css";
 
 const Floatingcta = () => {
+  const phone = "6285747281466"; // Nomor telepon
+  const baseUrl = `https://api.whatsapp.com/send?phone=${phone}&text=`;
+
+  const message = `
+  Hi Ms. Linda https://apps.bimbelmatrix.com/, Saya tertarik *Promo Seru, Diskon Rp100,000*, bisa dijelaskan informasi selengkapnya?
+  `.trim();
+
+  const finalUrl = `${baseUrl}${encodeURIComponent(message)}`;
   return (
     <div className="box-float-main">
       <div className="main-parent-wa">
@@ -12,10 +18,17 @@ const Floatingcta = () => {
         </label>
         <a
           className="parent-btn-wa"
-          href="https://api.whatsapp.com/send?phone=6285747281466&text=Halo%20Kak%20Linda%20https://apps.bimbelmatrix.com/,%20Saya%20ingin%20tanya%20program%20belajar%20yang%20ada%20di%20Edumatrix.%20Apa%20saja%20jenis%20program%20belajar%20dan%20pilihan%20paket%20sesinya?">
+          href={finalUrl}
+          target="_blank"
+          rel="noopener noreferrer">
           <button className="btn-float-wa">
             <span className="parent-icon-wa">
-              <FontAwesomeIcon className="icon-wa" icon={faWhatsapp} />
+              <img
+                src="/images/icon-wa.svg"
+                alt=""
+                className="icon-wa"
+                loading="lazy"
+              />
             </span>
           </button>
         </a>

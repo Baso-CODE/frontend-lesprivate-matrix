@@ -6,7 +6,11 @@ const LesPrivateKSMHeader = () => {
     <section className="centered-content-lesPrivate-ksm">
       <h1 id="les-privat-ksm">Les Privat AKM (Asesmen Kompetensi Minimum)</h1>
       <div className="image-lesPrivate">
-        <img src="/images/les-private/tk/ksm.png" alt="Les Privat AKM" />
+        <img
+          src="/images/les-private/ksm/ksm.webp"
+          alt="Les Privat AKM"
+          loading="lazy"
+        />
         <p className="image-caption">Les privat AKM terbaik se-jabodetabek</p>
       </div>
       <p>
@@ -18,7 +22,7 @@ const LesPrivateKSMHeader = () => {
       <h2 id="perubahan-dunia-pendidikan">
         Perubahan dalam Dunia Pendidikan di Indonesia
       </h2>
-      <p className="indent">
+      <p>
         Tahun 2020 adalah tahun yang penuh kejutan dan perubahan dalam dunia
         pendidikan di Indonesia. Dihapuskannya Ujian Nasional menjadi awal
         perubahan yang mendasar. Dalam rangka untuk menilai kompetensi siswa,
@@ -33,7 +37,7 @@ const LesPrivateKSMHeader = () => {
 
       {/* Section 2 */}
       <h2 id="bagian-dari-asesmen-nasional">Bagian dari Asesmen Nasional</h2>
-      <p className=" indent">
+      <p>
         Asesmen Nasional terdiri dari tiga bagian: Asesmen Kompetensi Minimum
         (AKM), Survey Karakter, dan Survey Lingkungan Belajar. AKM bisa
         memetakan sekolah – sekolah di daerah berdasarkan pada kompetensi
@@ -46,7 +50,7 @@ const LesPrivateKSMHeader = () => {
 
       {/* Section 3 */}
       <h2 id="tujuan-dari-akm">Tujuan dari AKM dan Manfaatnya</h2>
-      <p className="indent">
+      <p>
         AKM memberikan keleluasaan bagi guru untuk menilai kemampuan dan
         progress belajar siswa di sekolah. Asesmen Kompetensi Minimum berlaku
         untuk siswa yang berada di tengah jenjang sekolah (kelas 5 SD, 8 SMP, 11

@@ -3,128 +3,159 @@ import React, { useEffect, useState } from "react";
 // import "./Halamankabupaten.css";
 import { Helmet } from "react-helmet-async";
 import { useParams } from "react-router-dom";
-import rumahAdat from "../../assets/rumah_adat.png";
 import { getAllKecamatanBySlug } from "../../helper/request/getAllKecamatanBySlug";
 import PromoHomepage from "../../Home/PromoHomepage/PromoHomepage";
 import AsalSekolahSiswaEdumatrix from "../AsalSekolahSiswa/AsalSekolahSiswa";
 import BannerComponent from "../Banner/Banner";
-import PromoFree from "../BannerPromo/PromoFree";
 import FiturProgram from "../FiturProgram/FiturProgram";
-import Floatingcta from "../FloatingCta/Floatingcta";
 import Keunggulan from "../Keunggulan/Keunggulan";
 import LogoDescriptionComponent from "../LogoDescription/LogoDescription";
-import MasterCarousel from "../MasterCarousel/MasterCarousel";
+import MasterTeacher from "../MasterTeacher/MasterTeacher";
 import MatrixFeatures from "../MatrixFeatures/MatrixFeatures";
-import Navbar from "../Navbar/Navbar";
 import OnlineLesOptions from "../OnlineLesOption/OnlineLesOption";
 import PengajarLestPrivate from "../PengajarLestPrivate/PengajarLestPrivate";
 import ProgramBelajarLesPrivat from "../ProgramBelajarLesPrivate/ProgramBelajarLesPrivate";
 import ProgramLesPrivat from "../ProgramLesPrivate/ProgramLesPrivate";
 import PilihanProgram from "../ProgramOptions/PilihanProgram";
 import AsalSekolahSiswaMarque from "../SekolahSiswaMarque/SekolahSiswaMarque";
-import Slidertop from "../SlideTop/Slidertop";
+import EmbrelaSlider from "../SlideTop/EmbrelaSlider";
 import SuccessStoryLesPrivate from "../SuccesStoryLesPrivate/SuccesStoryLesPrivate";
 import ListKelurahan from "../Tab/ListKelurahan";
 
 const Halamankecamatan = () => {
   const [kecamatan, setKecamatan] = useState([]);
-  const { slug } = useParams();
+  const { kecamatanSlug } = useParams();
   useEffect(() => {
     const fetchKota = async () => {
       try {
-        const response = await getAllKecamatanBySlug(slug);
+        const response = await getAllKecamatanBySlug(kecamatanSlug);
         setKecamatan(response.data);
       } catch (error) {
         console.error("Failed to fetch kecamatan data:", error);
       }
     };
 
+    // {`${kecamatan.kecamatan}`}
     fetchKota();
-  }, [slug]);
+  }, [kecamatanSlug]);
 
   return (
     <React.Fragment>
       <Helmet>
-        <meta
-          charSet="utf-8"
-          name="robots"
-          content="Jasa Les Privat TK, SD, SMP, SMA, UTBK SNBT, SIMAK UI, UM PTN & CBT UGM terbaik dengan sistem belajar mengajar yang berkualitas  #1 - Edumatrix Indonesia"
-        />
+        <meta charSet="utf-8" />
         <title>
-          Les Privat di {`${kecamatan.kecamatan}`} - TK, SD, SMP, SMA, UTBK
-          SNBT, SIMAK UI, UM PTN & CBT UGM - Bimbel di{" "}
-          {`${kecamatan.kecamatan}`} Terbaik #1 - Matrix Indonesia Indonesia
+          Les Privat {`${kecamatan.kecamatan}`} TK SD SMP SMA OSN UTBK SNBT
+          SIMAK UI CBT UGM & Mahasiswa Privat Online & Guru ke Rumah Berkualitas
         </title>
-        <link rel="canonical" href="" />
+        <meta
+          name="description"
+          content={`Les Privat ${kecamatan.kecamatan} ke Rumah & Online TK SD SMP SMA OSN UTBK SNBT SIMAK UI CBT UGM & Mahasiswa Bimbel berkualitas, Guru Les dari UI UGM ITB dan PTN Top`}
+        />
+        <meta
+          name="keywords"
+          content={`Les Terbaik , ${kecamatan.kecamatan}, Guru Les Profesiona, Les untuk Anak , Les Privat Online, Les Privat ke Rumah, Bimbel , Les Privat SD, SMP, SMA , Les SIMAK UI, Les UM PTN, Les CBT UGM, pendidikan, tutor berkualitas, belajar efektif`}
+        />
+        <meta name="author" content="Matrix Tutoring" />
+        <meta name="robots" content="index, follow" />
+        {/* Open Graph Meta Tags */}
+        <meta
+          property="og:title"
+          content={`Les Privat ${kecamatan.kecamatan} TK SD SMP SMA OSN UTBK SNBT
+          SIMAK UI CBT UGM & Mahasiswa  Privat Online & Guru ke Rumah
+          Berkualitas`}
+        />
+        <meta
+          property="og:description"
+          content={`Les Privat ${kecamatan.kecamatan} ke Rumah & Online TK SD SMP SMA OSN UTBK SNBT SIMAK UI CBT UGM & Mahasiswa Bimbel berkualitas, Guru Les dari UI UGM ITB dan PTN Top`}
+        />
+        <meta
+          property="og:image"
+          content="https://apps.bimbelmatrix.com/images/DSIKON_BULANAN.webp"
+        />
+        <meta property="og:url" content={window.location.href} />
+        <meta property="og:type" content="website" />{" "}
+        <link rel="canonical" href={window.location.href} />
+        {/* Twitter Card Meta Tags */}
+        <meta
+          name="twitter:card"
+          content="https://apps.bimbelmatrix.com/images/DSIKON_BULANAN.webp"
+        />
+        <meta
+          name="twitter:title"
+          content={`Les Privat ${kecamatan.kecamatan}  TK SD SMP SMA OSN UTBK SNBT
+          SIMAK UI CBT UGM & Mahasiswa  Privat Online & Guru ke Rumah
+          Berkualitas`}
+        />
+        <meta
+          name="twitter:description"
+          content={`Les Privat ${kecamatan.kecamatan} ke Rumah & Online TK SD SMP SMA OSN UTBK SNBT SIMAK UI CBT UGM & Mahasiswa Bimbel berkualitas, Guru Les dari UI UGM ITB dan PTN Top`}
+        />
+        <meta
+          name="twitter:image"
+          content="https://apps.bimbelmatrix.com/images/DSIKON_BULANAN.webp"
+        />
       </Helmet>
-      <Navbar />
-      <div className="container-halaman-kabupaten">
-        <div className="content-kabupaten">
+      <div className="container-all">
+        <div className="content-kota">
           <div className="teks-content">
-            <h1 className="title-halaman-kabupaten">
-              Les Privat di {kecamatan.kecamatan} - TK, SD, SMP, SMA, UTBK SNBT,
-              SIMAK UI, UM PTN & CBT UGM Terbaik
+            <h1 className="title-halaman-kota">
+              Les Privat di{" "}
+              <span className="highlight-yellow-kota">
+                {kecamatan.kecamatan}
+              </span>{" "}
+              - TK, SD, SMP, SMA, UTBK SNBT, SIMAK UI, UM PTN & CBT UGM{" "}
+              <span className="highlight-yellow-kota">Terbaik</span>
             </h1>
-            <div className="paragraf-kabupaten">
-              <p>
-                Bimbel Les Privat di Kota {kecamatan.kecamatan} untuk TK, SD,
-                SMP, SMA, UN/AKM, OSN, CPNS, LPDP, PPDS, SIMAK UI, UTBK SNBT,
-                CBT UGM, UMPTN.
+            <div className="paragraf-kota">
+              <p className="child-paragraf-kota">
+                Bimbel Les Privat di Kecamatan{" "}
+                <span className="highlight-yellow-kota">
+                  {kecamatan.kecamatan}
+                </span>{" "}
+                untuk TK, SD, SMP, SMA, UN/AKM, OSN, CPNS, LPDP, PPDS, SIMAK UI,
+                UTBK SNBT, CBT UGM, UMPTN.
               </p>
               <p className="child-paragraf-kota">
                 Dapatkan layanan Les Privat kapan pun dan dimana pun dengan
                 lebih dari 5.000 Master Teacher Matrix yang siap memberikan
-                pelayanan terbaik.
+                pelayanan{" "}
+                <span className="highlight-yellow-kota">terbaik.</span>
               </p>
             </div>
           </div>
-          <a className="parent-img-modeltanya-program" href="">
-            <img
-              className="rumah-adat"
-              src={rumahAdat}
-              alt="Bimbel TK-SD-SMP-SMA"
-            />
-          </a>
 
-          {/* <a
-            className="parent-img-modeltanya-program"
-            href="https://wa.me/+6281216365729?text=Halo%20Kak%20Nia%20Saya%20ingin%20tanya%20les%20privat%20untuk%20Kelas%20:%0aMapel%20:%20%0aKurikulum%20:%20%0aWilayah%20:">
-            <img
-              className="model-program-kota"
-              src={modelTanyaProgram}
-              alt="Bimbel TK-SD-SMP-SMA"
-            />
-          </a> */}
+          <img
+            className="rumah-adat"
+            loading="eager"
+            src={"/images/KECAMATAN _1.webp"}
+            alt={`les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) di ${kecamatan.kecamatan} - Matrix Tutoring`}
+          />
         </div>
-        <Slidertop />
+        <EmbrelaSlider />
+        {/* <Slidertop /> */}
         <BannerComponent />
         <LogoDescriptionComponent />
         <PengajarLestPrivate />
         <FiturProgram />
-        <PromoFree />
+        {/*    {/* <PromoFree /> */}
         <PilihanProgram />
         <OnlineLesOptions />
         <ProgramLesPrivat />
-        <MasterCarousel />
+        <MasterTeacher />
         <ProgramBelajarLesPrivat />
         {/* <CurriculumOptions /> */}
-
         <MatrixFeatures />
-
         <SuccessStoryLesPrivate />
         {/* <TestimoniLestPrivate /> */}
         <AsalSekolahSiswaEdumatrix />
-
-        <Keunggulan />
-
-        <ListKelurahan />
-
         <AsalSekolahSiswaMarque />
+        <Keunggulan />
+        <ListKelurahan />
         <PromoHomepage />
       </div>
 
       {/* <Bottombar /> */}
-      <Floatingcta />
+      {/* <Floatingcta /> */}
     </React.Fragment>
   );
 };

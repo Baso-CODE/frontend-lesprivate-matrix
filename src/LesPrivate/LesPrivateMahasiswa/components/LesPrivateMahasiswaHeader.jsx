@@ -19,7 +19,8 @@ const LesPrivateMahasiswaHeader = () => {
 
       <div className="image-lesPrivate">
         <img
-          src="/images/les-private/tk/mahasiswa.png"
+          loading="lazy"
+          src="/images/les-private/mahasiswa/mahasiswa.webp"
           alt="Les Private Mahasiswa"
         />
         <p className="image-caption">
@@ -33,7 +34,7 @@ const LesPrivateMahasiswaHeader = () => {
         className="centered-mahasiswacontent-lesPrivate-mahasiswa">
         Pentingnya Les Privat untuk Mahasiswa
       </h2>
-      <p className=" indent">
+      <p className=" ">
         Menjadi seorang mahasiswa adakalanya mengalami kesulitan dalam memahami
         mata kuliah tertentu yang membuat mahasiswa sering kali harus pergi ke
         perpustakaan untuk meminjam buku atau bertanya pada teman terkait materi
@@ -58,7 +59,7 @@ const LesPrivateMahasiswaHeader = () => {
         id="jadwal-fleksibel-dan-les-privat-online">
         Jadwal Fleksibel dan Les Privat Online
       </h2>
-      <p className="indent">
+      <p className="">
         Les Privat Matrix sebagai lembaga privat yang sudah berpengalaman dalam
         melayani permintaan guru les privat mahasiswa datang ke rumah area
         Jakarta, Bogor, Depok, Tangerang, Tangsel, Bekasi, BSD dan sekitarnya.
@@ -73,7 +74,7 @@ const LesPrivateMahasiswaHeader = () => {
       {/* section 3 */}
       <section id="list-les-privat-mahasiswa">
         <LesPrivateMahasiswaList />
-        <p className="indent">
+        <p className="">
           Selain mata kuliah universitas dan jurusan, Les Privat Matrix juga
           melayani permintaan mahasiswa yang membutuhkan les privat untuk
           persiapan SIMAK UI S2, CPNS, TOEFL, IELTS, TOEIC, Komputer maupun

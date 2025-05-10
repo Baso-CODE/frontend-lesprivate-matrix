@@ -3,34 +3,33 @@
 .centered-content-lesPrivate-bahasa {
   width: 100%;
   margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 .centered-content-lesPrivate-bahasa h1 {
-  font-family: "Oswald", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 2rem;
-  color: #333;
+  font-size: 1.6rem;
+  color: #333333;
   margin-bottom: 1rem;
   text-align: center; /* Center-align heading text */
 }
 
 .centered-content-lesPrivate-bahasa h2 {
-  font-size: 1.2rem;
-  color: #333;
+  font-size: 1.4rem;
+  color: #333333;
   margin-top: 2rem;
   margin-bottom: 0.3rem;
-  font-family: "Oswald", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
 }
 
 .centered-content-lesPrivate-bahasa p {
-  font-size: 0.9rem;
-  color: #555;
+  font-size: 1rem;
+  color: #4f4f4f;
   line-height: 1.6;
-  margin-bottom: 1.5rem;
+
   font-weight: 500;
-  font-family: "Roboto", sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 .image-lesPrivate {
@@ -53,15 +52,15 @@
 /* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
   .centered-content-lesPrivate-bahasa h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .centered-content-lesPrivate-bahasa h2 {
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
 
   .centered-content-lesPrivate-bahasa p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .image-caption {
@@ -71,7 +70,7 @@
 
 @media (max-width: 768px) {
   .centered-content-lesPrivate-bahasa h1 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   .centered-content-lesPrivate-bahasa h2 {
@@ -79,7 +78,7 @@
   }
 
   .centered-content-lesPrivate-bahasa p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .image-caption {
@@ -89,11 +88,12 @@
 
 @media (max-width: 480px) {
   .centered-content-lesPrivate-bahasa h1 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 27px;
   }
 
   .centered-content-lesPrivate-bahasa h2 {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .centered-content-lesPrivate-bahasa p {

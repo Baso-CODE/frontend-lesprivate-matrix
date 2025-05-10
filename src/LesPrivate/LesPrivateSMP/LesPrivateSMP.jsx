@@ -1,10 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import AsalSekolahSiswaEdumatrix from "../../Components/AsalSekolahSiswa/AsalSekolahSiswa";
-import PromoFree from "../../Components/BannerPromo/PromoFree";
 import FiturProgram from "../../Components/FiturProgram/FiturProgram";
-import Floatingcta from "../../Components/FloatingCta/Floatingcta";
-import MasterCarousel from "../../Components/MasterCarousel/MasterCarousel";
+import Keunggulan from "../../Components/Keunggulan/Keunggulan";
 import MatrixFeatures from "../../Components/MatrixFeatures/MatrixFeatures";
 import OnlineLesOptions from "../../Components/OnlineLesOption/OnlineLesOption";
 import PengajarLestPrivate from "../../Components/PengajarLestPrivate/PengajarLestPrivate";
@@ -12,9 +10,11 @@ import ProgramBelajarLesPrivat from "../../Components/ProgramBelajarLesPrivate/P
 import ProgramLesPrivat from "../../Components/ProgramLesPrivate/ProgramLesPrivate";
 import PilihanProgram from "../../Components/ProgramOptions/PilihanProgram";
 import AsalSekolahSiswaMarque from "../../Components/SekolahSiswaMarque/SekolahSiswaMarque";
-import Slidertop from "../../Components/SlideTop/Slidertop";
-import Listkota from "../../Components/Tab/Listkota";
+import EmbrelaSlider from "../../Components/SlideTop/EmbrelaSlider";
 import PromoHomepage from "../../Home/PromoHomepage/PromoHomepage";
+
+import MasterTeacher from "../../Components/MasterTeacher/MasterTeacher";
+import ListKotaProgramLesPrivate from "../components/ListKotaProgramLesPrivate/ListKotaProgramLesPrivate";
 import TableOfContents from "../components/TableOfContent";
 import LesPrivateSMPHeader from "./components/LesPrivateSMPHeader";
 
@@ -27,10 +27,7 @@ const items = [
         text: "Pilihan Bahasa dan Kurikulum",
         href: "#pilihan-bahasa-dan-kurikulum",
       },
-      {
-        text: "Persiapan Ujian",
-        href: "#persiapan-ujian",
-      },
+
       {
         text: "Pengajar Berkualitas dan Fleksibilitas",
         href: "#pengajar-berkualitas-dan-fleksibilitas",
@@ -68,11 +65,13 @@ const LesPrivateSMP = () => {
     <React.Fragment>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Bimbel dan Les Privat SMP Terbaik #1 - Les Private Matrix</title>
+        <title>
+          Les Privat SMP #1 Bimbingan Belajar Terbaik untuk Sukses Akademik!
+        </title>
         <meta name="robots" content="index, follow" />
         <meta
           name="description"
-          content="Les Privat SMP terbaik di Indonesia dengan layanan guru privat berkualitas untuk membantu siswa SMP belajar secara online dan offline."
+          content="Les Privat SMP terbaik di Indonesia! Dapatkan bimbingan belajar dari guru privat berpengalaman dengan metode pembelajaran yang efektif, tersedia online dan offline. Tingkatkan prestasi akademik dengan les privat yang disesuaikan untuk siswa SMP."
         />
         <meta
           name="keywords"
@@ -104,13 +103,13 @@ const LesPrivateSMP = () => {
 
         <link
           rel="canonical"
-          href="https://apps.bimbelmatrix.com/les-privat-smp"
+          href={`https://apps.bimbelmatrix.com/les-privat-smp`}
         />
 
         {/* Open Graph Meta Tags */}
         <meta
           property="og:title"
-          content="Les Privat SMP Terbaik #1 - Guru Les Privat Sekolah Menengah Pertama"
+          content="Les Privat SMP Terbaik #1 Guru Les Privat Sekolah Menengah Pertama"
         />
         <meta
           property="og:description"
@@ -123,7 +122,7 @@ const LesPrivateSMP = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://dblpm.edulink-indonesia.com/promo-images/IMG1725949265851.png"
+          content="https://apps.bimbelmatrix.com/images/DSIKON_BULANAN.webp"
         />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -131,12 +130,12 @@ const LesPrivateSMP = () => {
         {/* Twitter Card Meta Tags */}
         <meta
           name="twitter:card"
-          content="https://dblpm.edulink-indonesia.com/promo-images/IMG1725949265851.png"
+          content="https://apps.bimbelmatrix.com/images/DSIKON_BULANAN.webp"
         />
         <meta name="twitter:site" content="@matrix_tutoring" />
         <meta
           name="twitter:title"
-          content="Les Privat SMP Terbaik #1 - Guru Les Privat Sekolah Menengah Pertama"
+          content="Les Privat SMP Terbaik #1 Guru Les Privat Sekolah Menengah Pertama"
         />
         <meta
           name="twitter:description"
@@ -144,22 +143,22 @@ const LesPrivateSMP = () => {
         />
         <meta
           name="twitter:image"
-          content="https://dblpm.edulink-indonesia.com/promo-images/IMG1725949265851.png"
+          content="https://apps.bimbelmatrix.com/images/DSIKON_BULANAN.webp"
         />
       </Helmet>
 
       <div className="container-all">
-        <Slidertop />
+        <EmbrelaSlider />
+        {/* <Slidertop /> */}
         <TableOfContents title="Table of Contents" items={items} />
         <LesPrivateSMPHeader />
-
         <section id="pengajar-les-private">
           <PengajarLestPrivate />
         </section>
         <section id="fitur-program-les-private">
           <FiturProgram />
         </section>
-        <PromoFree />
+        {/*    {/* <PromoFree /> */}
         <section id="pilihan-program-les-private">
           <PilihanProgram />
         </section>
@@ -169,20 +168,23 @@ const LesPrivateSMP = () => {
         <section id="program-les-private-edumatrix">
           <ProgramLesPrivat />
         </section>
-        <MasterCarousel />
+        <MasterTeacher />
         <ProgramBelajarLesPrivat />
         <MatrixFeatures />
         <section id="asal-sekolah-siswa-edumatrix-private">
           <AsalSekolahSiswaEdumatrix />
           <AsalSekolahSiswaMarque />
         </section>
-
-        <Listkota />
-
+        <Keunggulan />
+        <ListKotaProgramLesPrivate
+          program={"les-privat-smp"}
+          title={"Les Privat SMP"}
+        />
+        {/* <AccordionFAQ /> */}
         <PromoHomepage />
       </div>
 
-      <Floatingcta />
+      {/* <Floatingcta /> */}
       {/* <Bottombar /> */}
     </React.Fragment>
   );
